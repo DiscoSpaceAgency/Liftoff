@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Disco Space Agency. All rights reserved.
 //
 
+#define API_URL_PREFIX @"http://108.166.83.92/api/"
+
 #import "DSADataGrabber.h"
 
 @implementation DSADataGrabber
@@ -22,7 +24,32 @@
 
 - (NSArray *)getAllMissions
 {
-    return @[];
+    NSString *url = [API_URL_PREFIX stringByAppendingFormat:@"missions"];
+    NSArray *missions = [self responseFromURL:url];
+    
+    return missions;
+}
+
+- (NSArray *)responseFromURL:(NSString *)url {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSError *errorDownload = nil;
+    NSURLResponse *response = nil;
+    
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&errorDownload];
+    
+    if (!errorDownload && data != nil) {
+        NSError *error = nil;
+        NSArray *JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        if (![JSON isKindOfClass:[NSArray class]]) {
+            return @[];
+        } else {
+            return JSON;
+        }
+    } else {
+        // Problem...
+        return @[];
+    }
 }
 
 @end

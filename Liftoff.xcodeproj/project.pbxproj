@@ -28,6 +28,19 @@
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
 		C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */; };
+		C985557D18F9D62F00D7D1C7 /* DSADataGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = C985557A18F9D62F00D7D1C7 /* DSADataGrabber.m */; };
+		C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C985557C18F9D62F00D7D1C7 /* DSADataStore.m */; };
+		C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558118F9D79800D7D1C7 /* EGOCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C985559518F9D79800D7D1C7 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558318F9D79800D7D1C7 /* EGOImageButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C985559618F9D79800D7D1C7 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558518F9D79800D7D1C7 /* EGOImageLoadConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558718F9D79800D7D1C7 /* EGOImageLoader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C985559818F9D79800D7D1C7 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558918F9D79800D7D1C7 /* EGOImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C985559918F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558B18F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558D18F9D79800D7D1C7 /* NSString+SDExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */ = {isa = PBXBuildFile; fileRef = C985559318F9D79800D7D1C7 /* UIImageResize.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A018F9D8C700D7D1C7 /* DSAAstronautCell.m */; };
+		C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */; };
+		C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +80,32 @@
 		C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
 		C985557618F9B4C400D7D1C7 /* DSAMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAMissionViewController.h; sourceTree = "<group>"; };
 		C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAMissionViewController.m; sourceTree = "<group>"; };
+		C985557918F9D62F00D7D1C7 /* DSADataGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSADataGrabber.h; sourceTree = "<group>"; };
+		C985557A18F9D62F00D7D1C7 /* DSADataGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSADataGrabber.m; sourceTree = "<group>"; };
+		C985557B18F9D62F00D7D1C7 /* DSADataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSADataStore.h; sourceTree = "<group>"; };
+		C985557C18F9D62F00D7D1C7 /* DSADataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSADataStore.m; sourceTree = "<group>"; };
+		C985558018F9D79800D7D1C7 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGOCache.h; path = "Dependencies/EGO Image Loader/EGOCache.h"; sourceTree = "<group>"; };
+		C985558118F9D79800D7D1C7 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGOCache.m; path = "Dependencies/EGO Image Loader/EGOCache.m"; sourceTree = "<group>"; };
+		C985558218F9D79800D7D1C7 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGOImageButton.h; path = "Dependencies/EGO Image Loader/EGOImageButton.h"; sourceTree = "<group>"; };
+		C985558318F9D79800D7D1C7 /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGOImageButton.m; path = "Dependencies/EGO Image Loader/EGOImageButton.m"; sourceTree = "<group>"; };
+		C985558418F9D79800D7D1C7 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGOImageLoadConnection.h; path = "Dependencies/EGO Image Loader/EGOImageLoadConnection.h"; sourceTree = "<group>"; };
+		C985558518F9D79800D7D1C7 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGOImageLoadConnection.m; path = "Dependencies/EGO Image Loader/EGOImageLoadConnection.m"; sourceTree = "<group>"; };
+		C985558618F9D79800D7D1C7 /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGOImageLoader.h; path = "Dependencies/EGO Image Loader/EGOImageLoader.h"; sourceTree = "<group>"; };
+		C985558718F9D79800D7D1C7 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGOImageLoader.m; path = "Dependencies/EGO Image Loader/EGOImageLoader.m"; sourceTree = "<group>"; };
+		C985558818F9D79800D7D1C7 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGOImageView.h; path = "Dependencies/EGO Image Loader/EGOImageView.h"; sourceTree = "<group>"; };
+		C985558918F9D79800D7D1C7 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGOImageView.m; path = "Dependencies/EGO Image Loader/EGOImageView.m"; sourceTree = "<group>"; };
+		C985558A18F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSCachedURLResponse+LeakFix.h"; path = "Dependencies/EGO Image Loader/NSCachedURLResponse+LeakFix.h"; sourceTree = "<group>"; };
+		C985558B18F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSCachedURLResponse+LeakFix.m"; path = "Dependencies/EGO Image Loader/NSCachedURLResponse+LeakFix.m"; sourceTree = "<group>"; };
+		C985558C18F9D79800D7D1C7 /* NSString+SDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SDExtensions.h"; path = "Dependencies/EGO Image Loader/NSString+SDExtensions.h"; sourceTree = "<group>"; };
+		C985558D18F9D79800D7D1C7 /* NSString+SDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SDExtensions.m"; path = "Dependencies/EGO Image Loader/NSString+SDExtensions.m"; sourceTree = "<group>"; };
+		C985559218F9D79800D7D1C7 /* UIImageResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageResize.h; path = "Dependencies/EGO Image Loader/UIImageResize.h"; sourceTree = "<group>"; };
+		C985559318F9D79800D7D1C7 /* UIImageResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageResize.m; path = "Dependencies/EGO Image Loader/UIImageResize.m"; sourceTree = "<group>"; };
+		C985559F18F9D8C700D7D1C7 /* DSAAstronautCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAAstronautCell.h; sourceTree = "<group>"; };
+		C98555A018F9D8C700D7D1C7 /* DSAAstronautCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAAstronautCell.m; sourceTree = "<group>"; };
+		C98555A218F9DF9800D7D1C7 /* DSAEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAEventCell.h; sourceTree = "<group>"; };
+		C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAEventCell.m; sourceTree = "<group>"; };
+		C98555A518F9EAC800D7D1C7 /* DSAShadowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAShadowLabel.h; sourceTree = "<group>"; };
+		C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAShadowLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +137,12 @@
 			children = (
 				C985557618F9B4C400D7D1C7 /* DSAMissionViewController.h */,
 				C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */,
+				C98555A518F9EAC800D7D1C7 /* DSAShadowLabel.h */,
+				C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */,
+				C985559F18F9D8C700D7D1C7 /* DSAAstronautCell.h */,
+				C98555A018F9D8C700D7D1C7 /* DSAAstronautCell.m */,
+				C98555A218F9DF9800D7D1C7 /* DSAEventCell.h */,
+				C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */,
 			);
 			path = Mission;
 			sourceTree = "<group>";
@@ -125,6 +170,10 @@
 		4C12A10F18F9BAB7002F9AEE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C985557918F9D62F00D7D1C7 /* DSADataGrabber.h */,
+				C985557A18F9D62F00D7D1C7 /* DSADataGrabber.m */,
+				C985557B18F9D62F00D7D1C7 /* DSADataStore.h */,
+				C985557C18F9D62F00D7D1C7 /* DSADataStore.m */,
 				4C12A11018F9BB71002F9AEE /* DSAMission.h */,
 				4C12A11118F9BB71002F9AEE /* DSAMission.m */,
 				4C12A11418F9BB87002F9AEE /* DSAEvent.h */,
@@ -179,6 +228,7 @@
 		4CD476EC18F9B09F00E14178 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C985559E18F9D86800D7D1C7 /* Dependencies */,
 				4CD476ED18F9B09F00E14178 /* Liftoff-Info.plist */,
 				4CD476EE18F9B09F00E14178 /* InfoPlist.strings */,
 				4CD476F118F9B09F00E14178 /* main.m */,
@@ -203,6 +253,37 @@
 				4CD4770718F9B09F00E14178 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C985557F18F9D74100D7D1C7 /* EGOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C985558018F9D79800D7D1C7 /* EGOCache.h */,
+				C985558118F9D79800D7D1C7 /* EGOCache.m */,
+				C985558218F9D79800D7D1C7 /* EGOImageButton.h */,
+				C985558318F9D79800D7D1C7 /* EGOImageButton.m */,
+				C985558418F9D79800D7D1C7 /* EGOImageLoadConnection.h */,
+				C985558518F9D79800D7D1C7 /* EGOImageLoadConnection.m */,
+				C985558618F9D79800D7D1C7 /* EGOImageLoader.h */,
+				C985558718F9D79800D7D1C7 /* EGOImageLoader.m */,
+				C985558818F9D79800D7D1C7 /* EGOImageView.h */,
+				C985558918F9D79800D7D1C7 /* EGOImageView.m */,
+				C985558A18F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.h */,
+				C985558B18F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m */,
+				C985558C18F9D79800D7D1C7 /* NSString+SDExtensions.h */,
+				C985558D18F9D79800D7D1C7 /* NSString+SDExtensions.m */,
+				C985559218F9D79800D7D1C7 /* UIImageResize.h */,
+				C985559318F9D79800D7D1C7 /* UIImageResize.m */,
+			);
+			name = EGOImageLoader;
+			sourceTree = "<group>";
+		};
+		C985559E18F9D86800D7D1C7 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C985557F18F9D74100D7D1C7 /* EGOImageLoader */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,9 +384,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
+				C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */,
+				C985559818F9D79800D7D1C7 /* EGOImageView.m in Sources */,
+				C985559618F9D79800D7D1C7 /* EGOImageLoadConnection.m in Sources */,
 				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
+				C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */,
+				C985559518F9D79800D7D1C7 /* EGOImageButton.m in Sources */,
+				C985559918F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m in Sources */,
 				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
+				C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */,
 				4CD476F218F9B09F00E14178 /* main.m in Sources */,
+				C985557D18F9D62F00D7D1C7 /* DSADataGrabber.m in Sources */,
+				C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */,
+				C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */,
+				C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */,
+				C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
 				C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */,
 				4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */,

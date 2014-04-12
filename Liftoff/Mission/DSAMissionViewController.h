@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGOImageView.h"
+
+#import "DSAAstronautCell.h"
 #import "DSAMission.h"
 #import "DSAEvent.h"
 
-@interface DSAMissionViewController : UIViewController {
+@interface DSAMissionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     IBOutlet UIScrollView *content;
     
-    IBOutlet UIImageView *missionImage;
+    IBOutlet EGOImageView *missionImage;
+    IBOutlet UIImageView *topBarImage;
     
     IBOutlet UIButton *backButton;
     
@@ -22,6 +26,13 @@
     IBOutlet UILabel *statusLabel;
     
     IBOutlet UIButton *downButton;
+    IBOutlet UIImageView *downShadow;
+    
+    IBOutlet UITableView *astronautTable;
+    
+    IBOutlet UILabel *eventTitle;
+    IBOutlet UIImageView *eventDivider;
+    IBOutlet UITableView *eventTable;
 }
 @property (nonatomic, strong) DSAMission *mission;
 
