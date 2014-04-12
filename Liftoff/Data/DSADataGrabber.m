@@ -10,4 +10,19 @@
 
 @implementation DSADataGrabber
 
++ (instancetype)sharedInstance
+{
+    static DSADataGrabber *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[DSADataGrabber alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (NSArray *)getAllMissions
+{
+    return @[];
+}
+
 @end

@@ -8,7 +8,9 @@
 
 @interface DSADataStore : NSObject
 
-@property (strong, nonatomic) NSArray *missions;
-@property (strong, nonatomic) NSArray *events;
+@property (strong, readonly, nonatomic) NSArray *missions;
+@property (strong, readonly, nonatomic) NSArray *events;
+
++ (instancetype)sharedInstance;
 
 @end
