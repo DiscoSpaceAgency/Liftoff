@@ -19,6 +19,8 @@
 		4CD4770118F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
 		4CD4770918F9B09F00E14178 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4770718F9B09F00E14178 /* InfoPlist.strings */; };
 		4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4770A18F9B09F00E14178 /* LiftoffTests.m */; };
+		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
+		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		4CD4770618F9B09F00E14178 /* LiftoffTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiftoffTests-Info.plist"; sourceTree = "<group>"; };
 		4CD4770818F9B09F00E14178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CD4770A18F9B09F00E14178 /* LiftoffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftoffTests.m; sourceTree = "<group>"; };
+		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
+		C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				4CD476F418F9B09F00E14178 /* DSAAppDelegate.h */,
 				4CD476F518F9B09F00E14178 /* DSAAppDelegate.m */,
+				C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */,
+				C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */,
 				4CD476F718F9B09F00E14178 /* Images.xcassets */,
 				4CD476EC18F9B09F00E14178 /* Supporting Files */,
 			);
@@ -221,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD476F018F9B09F00E14178 /* InfoPlist.strings in Resources */,
+				C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */,
 				4CD476F818F9B09F00E14178 /* Images.xcassets in Resources */,
+				C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +448,7 @@
 				4CD4771018F9B09F00E14178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CD4771118F9B09F00E14178 /* Build configuration list for PBXNativeTarget "LiftoffTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +457,7 @@
 				4CD4771318F9B09F00E14178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
