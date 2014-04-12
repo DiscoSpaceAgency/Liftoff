@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */; };
 		4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */; };
+		4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11118F9BB71002F9AEE /* DSAMission.m */; };
+		4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11118F9BB71002F9AEE /* DSAMission.m */; };
+		4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11518F9BB87002F9AEE /* DSAEvent.m */; };
+		4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11518F9BB87002F9AEE /* DSAEvent.m */; };
 		4CD476E618F9B09F00E14178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E518F9B09F00E14178 /* Foundation.framework */; };
 		4CD476E818F9B09F00E14178 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E718F9B09F00E14178 /* CoreGraphics.framework */; };
 		4CD476EA18F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
@@ -39,6 +43,10 @@
 /* Begin PBXFileReference section */
 		4C12A10818F9B8C2002F9AEE /* DSATimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineViewController.h; sourceTree = "<group>"; };
 		4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineViewController.m; sourceTree = "<group>"; };
+		4C12A11018F9BB71002F9AEE /* DSAMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAMission.h; sourceTree = "<group>"; };
+		4C12A11118F9BB71002F9AEE /* DSAMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAMission.m; sourceTree = "<group>"; };
+		4C12A11418F9BB87002F9AEE /* DSAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAEvent.h; sourceTree = "<group>"; };
+		4C12A11518F9BB87002F9AEE /* DSAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAEvent.m; sourceTree = "<group>"; };
 		4CD476E218F9B09F00E14178 /* Liftoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD476E518F9B09F00E14178 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CD476E718F9B09F00E14178 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +125,10 @@
 		4C12A10F18F9BAB7002F9AEE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4C12A11018F9BB71002F9AEE /* DSAMission.h */,
+				4C12A11118F9BB71002F9AEE /* DSAMission.m */,
+				4C12A11418F9BB87002F9AEE /* DSAEvent.h */,
+				4C12A11518F9BB87002F9AEE /* DSAEvent.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -291,10 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
 				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD476F218F9B09F00E14178 /* main.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
 				C985557818F9B4C400D7D1C7 /* MissionViewController.m in Sources */,
+				4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */,
 				4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */,
+				4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
