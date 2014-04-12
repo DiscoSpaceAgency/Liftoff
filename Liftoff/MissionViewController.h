@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MissionViewController : UIViewController
+@interface MissionViewController : UIViewController {
+    IBOutlet UIScrollView *content;
+    
+    IBOutlet UIImageView *missionImage;
+    
+    IBOutlet UIButton *backButton;
+    
+    IBOutlet UILabel *missionName;
+    IBOutlet UILabel *agencyLabel;
+    IBOutlet UILabel *statusLabel;
+    
+    IBOutlet UIButton *downButton;
+}
 
 @end
