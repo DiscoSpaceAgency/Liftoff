@@ -21,6 +21,7 @@
 		4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4770A18F9B09F00E14178 /* LiftoffTests.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
+		C985557818F9B4C400D7D1C7 /* MissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985557718F9B4C400D7D1C7 /* MissionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		4CD4770A18F9B09F00E14178 /* LiftoffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftoffTests.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
+		C985557618F9B4C400D7D1C7 /* MissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionViewController.h; sourceTree = "<group>"; };
+		C985557718F9B4C400D7D1C7 /* MissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				4CD476F518F9B09F00E14178 /* DSAAppDelegate.m */,
 				C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */,
 				C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */,
+				C985557618F9B4C400D7D1C7 /* MissionViewController.h */,
+				C985557718F9B4C400D7D1C7 /* MissionViewController.m */,
 				4CD476F718F9B09F00E14178 /* Images.xcassets */,
 				4CD476EC18F9B09F00E14178 /* Supporting Files */,
 			);
@@ -250,6 +255,7 @@
 			files = (
 				4CD476F218F9B09F00E14178 /* main.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
+				C985557818F9B4C400D7D1C7 /* MissionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
