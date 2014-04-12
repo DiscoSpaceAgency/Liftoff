@@ -1,5 +1,5 @@
 //
-//  MissionViewController.h
+//  DSAMissionViewController.h
 //  Liftoff
 //
 //  Created by Harry Slotwiner on 4/12/14.
@@ -7,19 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DSAMission.h"
+#import "DSAEvent.h"
 
-@interface MissionViewController : UIViewController {
+@interface DSAMissionViewController : UIViewController {
     IBOutlet UIScrollView *content;
     
     IBOutlet UIImageView *missionImage;
     
     IBOutlet UIButton *backButton;
     
-    IBOutlet UILabel *missionName;
+    IBOutlet UILabel *nameLabel;
     IBOutlet UILabel *agencyLabel;
     IBOutlet UILabel *statusLabel;
     
     IBOutlet UIButton *downButton;
 }
+@property (nonatomic, strong) DSAMission *mission;
+
+- (IBAction)done:(id)sender;
 
 @end

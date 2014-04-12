@@ -13,15 +13,6 @@
 		4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11118F9BB71002F9AEE /* DSAMission.m */; };
 		4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11518F9BB87002F9AEE /* DSAEvent.m */; };
 		4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11518F9BB87002F9AEE /* DSAEvent.m */; };
-		4C12A11A18F9C32C002F9AEE /* DSATimelineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11918F9C32C002F9AEE /* DSATimelineDataSource.m */; };
-		4C12A11B18F9C32C002F9AEE /* DSATimelineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11918F9C32C002F9AEE /* DSATimelineDataSource.m */; };
-		4C12A11E18F9C357002F9AEE /* DSADataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11D18F9C357002F9AEE /* DSADataStore.m */; };
-		4C12A11F18F9C357002F9AEE /* DSADataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11D18F9C357002F9AEE /* DSADataStore.m */; };
-		4C12A12218F9C4EB002F9AEE /* DSADataGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A12118F9C4EB002F9AEE /* DSADataGrabber.m */; };
-		4C12A12318F9C4EB002F9AEE /* DSADataGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A12118F9C4EB002F9AEE /* DSADataGrabber.m */; };
-		4C12A12418F9C575002F9AEE /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
-		4C12A12718F9C5A8002F9AEE /* DSATimelineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A12618F9C5A8002F9AEE /* DSATimelineViewCell.m */; };
-		4C12A12818F9C5A8002F9AEE /* DSATimelineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A12618F9C5A8002F9AEE /* DSATimelineViewCell.m */; };
 		4CD476E618F9B09F00E14178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E518F9B09F00E14178 /* Foundation.framework */; };
 		4CD476E818F9B09F00E14178 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E718F9B09F00E14178 /* CoreGraphics.framework */; };
 		4CD476EA18F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
@@ -36,7 +27,7 @@
 		4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4770A18F9B09F00E14178 /* LiftoffTests.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
-		C985557818F9B4C400D7D1C7 /* MissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985557718F9B4C400D7D1C7 /* MissionViewController.m */; };
+		C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,14 +47,6 @@
 		4C12A11118F9BB71002F9AEE /* DSAMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAMission.m; sourceTree = "<group>"; };
 		4C12A11418F9BB87002F9AEE /* DSAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAEvent.h; sourceTree = "<group>"; };
 		4C12A11518F9BB87002F9AEE /* DSAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAEvent.m; sourceTree = "<group>"; };
-		4C12A11818F9C32C002F9AEE /* DSATimelineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineDataSource.h; sourceTree = "<group>"; };
-		4C12A11918F9C32C002F9AEE /* DSATimelineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineDataSource.m; sourceTree = "<group>"; };
-		4C12A11C18F9C357002F9AEE /* DSADataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSADataStore.h; sourceTree = "<group>"; };
-		4C12A11D18F9C357002F9AEE /* DSADataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSADataStore.m; sourceTree = "<group>"; };
-		4C12A12018F9C4EB002F9AEE /* DSADataGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSADataGrabber.h; sourceTree = "<group>"; };
-		4C12A12118F9C4EB002F9AEE /* DSADataGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSADataGrabber.m; sourceTree = "<group>"; };
-		4C12A12518F9C5A8002F9AEE /* DSATimelineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineViewCell.h; sourceTree = "<group>"; };
-		4C12A12618F9C5A8002F9AEE /* DSATimelineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineViewCell.m; sourceTree = "<group>"; };
 		4CD476E218F9B09F00E14178 /* Liftoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD476E518F9B09F00E14178 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CD476E718F9B09F00E14178 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,8 +65,8 @@
 		4CD4770A18F9B09F00E14178 /* LiftoffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftoffTests.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
-		C985557618F9B4C400D7D1C7 /* MissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissionViewController.h; sourceTree = "<group>"; };
-		C985557718F9B4C400D7D1C7 /* MissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissionViewController.m; sourceTree = "<group>"; };
+		C985557618F9B4C400D7D1C7 /* DSAMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAMissionViewController.h; sourceTree = "<group>"; };
+		C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAMissionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +96,8 @@
 		4C12A10C18F9B921002F9AEE /* Mission */ = {
 			isa = PBXGroup;
 			children = (
-				C985557618F9B4C400D7D1C7 /* MissionViewController.h */,
-				C985557718F9B4C400D7D1C7 /* MissionViewController.m */,
+				C985557618F9B4C400D7D1C7 /* DSAMissionViewController.h */,
+				C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */,
 			);
 			path = Mission;
 			sourceTree = "<group>";
@@ -124,10 +107,6 @@
 			children = (
 				4C12A10818F9B8C2002F9AEE /* DSATimelineViewController.h */,
 				4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */,
-				4C12A11818F9C32C002F9AEE /* DSATimelineDataSource.h */,
-				4C12A11918F9C32C002F9AEE /* DSATimelineDataSource.m */,
-				4C12A12518F9C5A8002F9AEE /* DSATimelineViewCell.h */,
-				4C12A12618F9C5A8002F9AEE /* DSATimelineViewCell.m */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -146,14 +125,10 @@
 		4C12A10F18F9BAB7002F9AEE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				4C12A11C18F9C357002F9AEE /* DSADataStore.h */,
-				4C12A11D18F9C357002F9AEE /* DSADataStore.m */,
 				4C12A11018F9BB71002F9AEE /* DSAMission.h */,
 				4C12A11118F9BB71002F9AEE /* DSAMission.m */,
 				4C12A11418F9BB87002F9AEE /* DSAEvent.h */,
 				4C12A11518F9BB87002F9AEE /* DSAEvent.m */,
-				4C12A12018F9C4EB002F9AEE /* DSADataGrabber.h */,
-				4C12A12118F9C4EB002F9AEE /* DSADataGrabber.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -317,7 +292,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C12A12418F9C575002F9AEE /* Storyboard_iPhone.storyboard in Resources */,
 				4CD4770918F9B09F00E14178 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,15 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C12A11E18F9C357002F9AEE /* DSADataStore.m in Sources */,
 				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
 				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD476F218F9B09F00E14178 /* main.m in Sources */,
-				4C12A12718F9C5A8002F9AEE /* DSATimelineViewCell.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
-				C985557818F9B4C400D7D1C7 /* MissionViewController.m in Sources */,
-				4C12A12218F9C4EB002F9AEE /* DSADataGrabber.m in Sources */,
-				4C12A11A18F9C32C002F9AEE /* DSATimelineDataSource.m in Sources */,
+				C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */,
 				4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,12 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */,
-				4C12A11B18F9C32C002F9AEE /* DSATimelineDataSource.m in Sources */,
-				4C12A12818F9C5A8002F9AEE /* DSATimelineViewCell.m in Sources */,
 				4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
-				4C12A12318F9C4EB002F9AEE /* DSADataGrabber.m in Sources */,
 				4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */,
-				4C12A11F18F9C357002F9AEE /* DSADataStore.m in Sources */,
 				4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

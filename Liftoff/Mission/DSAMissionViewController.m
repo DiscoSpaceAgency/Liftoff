@@ -1,18 +1,18 @@
 //
-//  MissionViewController.m
+//  DSAMissionViewController.m
 //  Liftoff
 //
 //  Created by Harry Slotwiner on 4/12/14.
 //  Copyright (c) 2014 Disco Space Agency. All rights reserved.
 //
 
-#import "MissionViewController.h"
+#import "DSAMissionViewController.h"
 
-@interface MissionViewController ()
+@interface DSAMissionViewController ()
 
 @end
 
-@implementation MissionViewController
+@implementation DSAMissionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +27,17 @@
 {
     [super viewDidLoad];
     
+    downButton.layer.cornerRadius = downButton.frame.size.width;
     
+    nameLabel.text = self.mission.name;
+    agencyLabel.text = [self.mission.agencies objectAtIndex:0];
+    //statusLabel.text = ?
+    
+    
+}
+
+- (IBAction)done:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
