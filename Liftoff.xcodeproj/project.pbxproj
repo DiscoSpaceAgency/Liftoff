@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */; };
+		4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */; };
 		4CD476E618F9B09F00E14178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E518F9B09F00E14178 /* Foundation.framework */; };
 		4CD476E818F9B09F00E14178 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E718F9B09F00E14178 /* CoreGraphics.framework */; };
 		4CD476EA18F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C12A10818F9B8C2002F9AEE /* DSATimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineViewController.h; sourceTree = "<group>"; };
+		4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineViewController.m; sourceTree = "<group>"; };
 		4CD476E218F9B09F00E14178 /* Liftoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD476E518F9B09F00E14178 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CD476E718F9B09F00E14178 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +124,8 @@
 				C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */,
 				C985557618F9B4C400D7D1C7 /* MissionViewController.h */,
 				C985557718F9B4C400D7D1C7 /* MissionViewController.m */,
+				4C12A10818F9B8C2002F9AEE /* DSATimelineViewController.h */,
+				4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */,
 				4CD476F718F9B09F00E14178 /* Images.xcassets */,
 				4CD476EC18F9B09F00E14178 /* Supporting Files */,
 			);
@@ -253,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD476F218F9B09F00E14178 /* main.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
 				C985557818F9B4C400D7D1C7 /* MissionViewController.m in Sources */,
@@ -263,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

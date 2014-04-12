@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timeline View Controller-->
         <scene sceneID="Ern-nX-vei">
             <objects>
-                <viewController id="eHN-Fn-oPG" sceneMemberID="viewController">
+                <viewController id="eHN-Fn-oPG" customClass="DSATimelineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ekI-5y-BSx"/>
                         <viewControllerLayoutGuide type="bottom" id="B7J-vg-5RW"/>
