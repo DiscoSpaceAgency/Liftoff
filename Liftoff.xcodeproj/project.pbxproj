@@ -85,6 +85,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C12A10C18F9B921002F9AEE /* Mission */ = {
+			isa = PBXGroup;
+			children = (
+				C985557618F9B4C400D7D1C7 /* MissionViewController.h */,
+				C985557718F9B4C400D7D1C7 /* MissionViewController.m */,
+			);
+			path = Mission;
+			sourceTree = "<group>";
+		};
+		4C12A10D18F9B926002F9AEE /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				4C12A10818F9B8C2002F9AEE /* DSATimelineViewController.h */,
+				4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		4C12A10E18F9B95A002F9AEE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4CD476F418F9B09F00E14178 /* DSAAppDelegate.h */,
+				4CD476F518F9B09F00E14178 /* DSAAppDelegate.m */,
+				C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */,
+				C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4C12A10F18F9BAB7002F9AEE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		4CD476D918F9B09F00E14178 = {
 			isa = PBXGroup;
 			children = (
@@ -118,14 +154,10 @@
 		4CD476EB18F9B09F00E14178 /* Liftoff */ = {
 			isa = PBXGroup;
 			children = (
-				4CD476F418F9B09F00E14178 /* DSAAppDelegate.h */,
-				4CD476F518F9B09F00E14178 /* DSAAppDelegate.m */,
-				C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */,
-				C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */,
-				C985557618F9B4C400D7D1C7 /* MissionViewController.h */,
-				C985557718F9B4C400D7D1C7 /* MissionViewController.m */,
-				4C12A10818F9B8C2002F9AEE /* DSATimelineViewController.h */,
-				4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */,
+				4C12A10E18F9B95A002F9AEE /* App */,
+				4C12A10F18F9BAB7002F9AEE /* Data */,
+				4C12A10C18F9B921002F9AEE /* Mission */,
+				4C12A10D18F9B926002F9AEE /* Timeline */,
 				4CD476F718F9B09F00E14178 /* Images.xcassets */,
 				4CD476EC18F9B09F00E14178 /* Supporting Files */,
 			);
@@ -385,6 +417,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Liftoff/Liftoff-Prefix.pch";
 				INFOPLIST_FILE = "Liftoff/Liftoff-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,6 +431,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Liftoff/Liftoff-Prefix.pch";
 				INFOPLIST_FILE = "Liftoff/Liftoff-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
