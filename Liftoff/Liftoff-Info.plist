@@ -41,8 +41,8 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Novecentosanswide-Light</string>
-		<string>Novecentosanswide-DemiBold</string>
+		<string>Novecentosanswide-Light.otf</string>
+		<string>Novecentosanswide-DemiBold.otf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -38,6 +38,8 @@
             [mutableAgencies addObject:@(kDSAAgencyUnknown)];
         }
     }];
+    mission.agencies = [NSArray arrayWithArray:mutableAgencies];
+    mission.agencyString = [((NSString *)jsonDict[@"agency"]) stringByReplacingOccurrencesOfString:@"," withString:@" - "];
     mission.type = [jsonDict[@"type"] integerValue];
     mission.websiteURL = [NSURL URLWithString:jsonDict[@"link"]];
     mission.imageURL = [NSURL URLWithString:jsonDict[@"image_link"]];
