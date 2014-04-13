@@ -80,4 +80,46 @@ float monthWidth(int month, int year)
     return [self position:endDate] - [self position:startDate];
 }
 
++ (NSDate *)startDateForPosition:(NSInteger)position
+{
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.year = [DSADataStore sharedInstance].minYear - 1;
+    dateComponents.month = 11;
+    NSDate *date = [self.calendar dateFromComponents:dateComponents];
+    const NSInteger maxYear = [DSADataStore sharedInstance].maxYear;
+    for (NSInteger year = [DSADataStore sharedInstance].minYear; year <= maxYear; year++) {
+        [dateComponents setYear:year];
+        for (NSInteger month = 1; month <= 12; month++) {
+            [dateComponents setMonth:month];
+            NSInteger datePosition = [self position:[self.calendar dateFromComponents:dateComponents]];
+            if (datePosition > position) {
+                return date;
+            }
+            date = [self.calendar dateFromComponents:dateComponents];
+        }
+    }
+    return date;
+}
+
++ (NSDate *)endDateForPosition:(NSInteger)position
+{
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.year = [DSADataStore sharedInstance].minYear - 1;
+    dateComponents.month = 11;
+    NSDate *date = [self.calendar dateFromComponents:dateComponents];
+    const NSInteger maxYear = [DSADataStore sharedInstance].maxYear;
+    for (NSInteger year = [DSADataStore sharedInstance].minYear; year <= maxYear; year++) {
+        [dateComponents setYear:year];
+        for (NSInteger month = 1; month <= 12; month++) {
+            [dateComponents setMonth:month];
+            date = [self.calendar dateFromComponents:dateComponents];
+            NSInteger datePosition = [self position:date];
+            if (datePosition > position) {
+                return date;
+            }
+        }
+    }
+    return date;
+}
+
 @end

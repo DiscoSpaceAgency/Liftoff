@@ -14,4 +14,7 @@
 + (NSInteger)maxPosition;
 + (NSInteger)widthForStart:(NSDate *)startDate end:(NSDate *)endDate;
 
++ (NSDate *)startDateForPosition:(NSInteger)position;
++ (NSDate *)endDateForPosition:(NSInteger)position;
+
 @end
