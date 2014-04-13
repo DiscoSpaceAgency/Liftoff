@@ -18,6 +18,10 @@
 		4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9818F9EF61009E585F /* DSATimelineWidthCalculator.m */; };
 		4C61AD9E18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */; };
 		4C61AD9F18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */; };
+		4C62443E18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62443D18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m */; };
+		4C62443F18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62443D18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m */; };
+		4C62444218FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */; };
+		4C62444318FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */; };
 		4CA79CD518FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
 		4CA79CD618FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
 		4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD818FA62F80008966B /* DSAScrubberManager.m */; };
@@ -86,6 +90,10 @@
 		4C61AD9818F9EF61009E585F /* DSATimelineWidthCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineWidthCalculator.m; sourceTree = "<group>"; };
 		4C61AD9C18FA189F009E585F /* DSATimelineOffsetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineOffsetManager.h; sourceTree = "<group>"; };
 		4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineOffsetManager.m; sourceTree = "<group>"; };
+		4C62443C18FAAFBD00D1D582 /* DSATimelineMissionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSATimelineMissionAnimator.h; path = ../Timeline/DSATimelineMissionAnimator.h; sourceTree = "<group>"; };
+		4C62443D18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSATimelineMissionAnimator.m; path = ../Timeline/DSATimelineMissionAnimator.m; sourceTree = "<group>"; };
+		4C62444018FABBE200D1D582 /* DSANavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSANavigationControllerDelegate.h; sourceTree = "<group>"; };
+		4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSANavigationControllerDelegate.m; sourceTree = "<group>"; };
 		4CA79CD318FA54250008966B /* DSAScrubberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberView.h; sourceTree = "<group>"; };
 		4CA79CD418FA54250008966B /* DSAScrubberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAScrubberView.m; sourceTree = "<group>"; };
 		4CA79CD718FA62F80008966B /* DSAScrubberManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberManager.h; sourceTree = "<group>"; };
@@ -215,6 +223,10 @@
 				4CD476F518F9B09F00E14178 /* DSAAppDelegate.m */,
 				C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */,
 				C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */,
+				4C62444018FABBE200D1D582 /* DSANavigationControllerDelegate.h */,
+				4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */,
+				4C62443C18FAAFBD00D1D582 /* DSATimelineMissionAnimator.h */,
+				4C62443D18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -516,10 +528,12 @@
 				C985559618F9D79800D7D1C7 /* EGOImageLoadConnection.m in Sources */,
 				C98555BB18FA45BE00D7D1C7 /* DSALaunchViewController.m in Sources */,
 				C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
+				4C62444218FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */,
 				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
 				C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */,
 				4C61AD9E18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */,
 				C985559518F9D79800D7D1C7 /* EGOImageButton.m in Sources */,
+				4C62443E18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m in Sources */,
 				4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */,
 				C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */,
 				C985559918F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m in Sources */,
@@ -547,7 +561,9 @@
 				4CA79CDA18FA62F80008966B /* DSAScrubberManager.m in Sources */,
 				4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */,
 				4CA79CD618FA54250008966B /* DSAScrubberView.m in Sources */,
+				4C62443F18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m in Sources */,
 				4C61AD9F18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */,
+				4C62444318FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */,
 				4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */,
 				4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */,

@@ -22,10 +22,15 @@
     return [DSADataStore sharedInstance].missions.count;
 }
 
+- (DSAMission *)missionforIndexPath:(NSIndexPath *)indexPath
+{
+    return [DSADataStore sharedInstance].missions[indexPath.row];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DSATimelineViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimelineCell"];
-    cell.mission = [DSADataStore sharedInstance].missions[indexPath.row];
+    cell.mission = [self missionforIndexPath:indexPath];
     return cell;
 }
 

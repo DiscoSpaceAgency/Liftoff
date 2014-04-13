@@ -46,7 +46,9 @@
     IBOutlet UITableView *eventTable;
     IBOutlet UIImageView *eventTimeline;
 }
+
 @property (nonatomic, strong) DSAMission *mission;
+@property (nonatomic, readonly, strong) IBOutlet EGOImageView *missionImage;
 
 - (IBAction)done:(id)sender;
 

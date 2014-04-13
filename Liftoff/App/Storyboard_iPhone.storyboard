@@ -144,7 +144,7 @@
         <!--Mission View Controller-->
         <scene sceneID="NpM-Vr-eRq">
             <objects>
-                <viewController storyboardIdentifier="DSAMissionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Jh-Ab-qYn" customClass="DSAMissionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DSAMissionViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Jh-Ab-qYn" customClass="DSAMissionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byk-al-W5Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -157,7 +157,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BDT-5B-LCb" userLabel="Header Fader">
+                                    <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BDT-5B-LCb" userLabel="Header Fader">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -382,10 +382,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="6G0-4S-pGH" id="tgG-p7-mDL"/>
                         <segue destination="eHN-Fn-oPG" kind="relationship" relationship="rootViewController" id="2Cf-hy-qvS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzq-JJ-kw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6G0-4S-pGH" customClass="DSANavigationControllerDelegate">
+                    <connections>
+                        <outlet property="navigationController" destination="DLH-m9-rrJ" id="98m-tg-gjD"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="283" y="42"/>
         </scene>

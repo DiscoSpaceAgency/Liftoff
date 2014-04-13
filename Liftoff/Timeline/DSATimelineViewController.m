@@ -9,6 +9,9 @@
 #import "DSATimelineViewController.h"
 #import "DSATimelineDataSource.h"
 #import "DSATimelineOffsetManager.h"
+#import "DSAMissionViewController.h"
+#import "DSATimelineMissionAnimator.h"
+#import "DSATimelineViewCell.h"
 
 @interface DSATimelineViewController ()
 
@@ -39,13 +42,36 @@
     [_timelineTable setDataSource:_dataSource];
     [_timelineTable setDelegate:[DSATimelineOffsetManager sharedInstance]];
     [[DSATimelineOffsetManager sharedInstance] setTimelineTable:_timelineTable];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(segueForTimelineNotification:) name:@"TimelineSelect" object:nil];
+
+    _selectedTimelineStripRect = CGRectZero;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
+
 - (IBAction)today {
     [[DSATimelineOffsetManager sharedInstance] todayRecognized];
+}
+
+- (void)segueForTimelineNotification:(NSNotification *)notification
+{
+    DSATimelineViewCell *cell = (DSATimelineViewCell *)[_dataSource tableView:_timelineTable cellForRowAtIndexPath:notification.userInfo[@"indexPath"]];
+    [self performSegueWithIdentifier:@"showMission" sender:[_dataSource missionforIndexPath:notification.userInfo[@"indexPath"]]];
+    _selectedTimelineStripRect = [_timelineTable convertRect:[_timelineTable rectForRowAtIndexPath:notification.userInfo[@"indexPath"]] toView:[_timelineTable superview]];
+    CGRect cellRect = CGRectOffset(cell.stripRect, 0, _selectedTimelineStripRect.origin.y);
+    _selectedTimelineStripRect = CGRectIntersection(_selectedTimelineStripRect, cellRect);
+//    _selectedTimelineStripRect = cell.stripRect;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showMission"]) {
+        DSAMissionViewController *missionViewController = [segue destinationViewController];
+        [missionViewController setMission:sender];
+    }
 }
 
 @end

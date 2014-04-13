@@ -96,4 +96,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (CGRect)stripRect
+{
+    return _timelineStrip.frame;
+}
+
 @end
