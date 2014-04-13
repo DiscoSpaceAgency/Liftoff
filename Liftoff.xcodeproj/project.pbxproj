@@ -56,6 +56,7 @@
 		C93F329618FAEDBA00288E26 /* DSASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F329518FAEDBA00288E26 /* DSASettingsViewController.m */; };
 		C93F329918FAF35B00288E26 /* icon_alert_active.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329718FAF35B00288E26 /* icon_alert_active.png */; };
 		C93F329A18FAF35B00288E26 /* icon_alert_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329818FAF35B00288E26 /* icon_alert_inactive.png */; };
+		C93F329C18FAFECA00288E26 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329B18FAFECA00288E26 /* Back.png */; };
 		C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C953A5C618FA4F5400131EA4 /* DSALaunch.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
@@ -70,7 +71,6 @@
 		C985559918F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558B18F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C985558D18F9D79800D7D1C7 /* NSString+SDExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */ = {isa = PBXBuildFile; fileRef = C985559318F9D79800D7D1C7 /* UIImageResize.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A018F9D8C700D7D1C7 /* DSAAstronautCell.m */; };
 		C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */; };
 		C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */; };
 		C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */; };
@@ -149,6 +149,7 @@
 		C93F329518FAEDBA00288E26 /* DSASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSASettingsViewController.m; path = Liftoff/Settings/DSASettingsViewController.m; sourceTree = SOURCE_ROOT; };
 		C93F329718FAF35B00288E26 /* icon_alert_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_active.png; sourceTree = "<group>"; };
 		C93F329818FAF35B00288E26 /* icon_alert_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_inactive.png; sourceTree = "<group>"; };
+		C93F329B18FAFECA00288E26 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
 		C953A5C518FA4F5400131EA4 /* DSALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSALaunch.h; sourceTree = "<group>"; };
 		C953A5C618FA4F5400131EA4 /* DSALaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunch.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -175,8 +176,6 @@
 		C985558D18F9D79800D7D1C7 /* NSString+SDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SDExtensions.m"; path = "Dependencies/EGO Image Loader/NSString+SDExtensions.m"; sourceTree = "<group>"; };
 		C985559218F9D79800D7D1C7 /* UIImageResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageResize.h; path = "Dependencies/EGO Image Loader/UIImageResize.h"; sourceTree = "<group>"; };
 		C985559318F9D79800D7D1C7 /* UIImageResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageResize.m; path = "Dependencies/EGO Image Loader/UIImageResize.m"; sourceTree = "<group>"; };
-		C985559F18F9D8C700D7D1C7 /* DSAAstronautCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAAstronautCell.h; sourceTree = "<group>"; };
-		C98555A018F9D8C700D7D1C7 /* DSAAstronautCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAAstronautCell.m; sourceTree = "<group>"; };
 		C98555A218F9DF9800D7D1C7 /* DSAEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAEventCell.h; sourceTree = "<group>"; };
 		C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAEventCell.m; sourceTree = "<group>"; };
 		C98555A518F9EAC800D7D1C7 /* DSAShadowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAShadowLabel.h; sourceTree = "<group>"; };
@@ -222,8 +221,6 @@
 				C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */,
 				C98555A518F9EAC800D7D1C7 /* DSAShadowLabel.h */,
 				C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */,
-				C985559F18F9D8C700D7D1C7 /* DSAAstronautCell.h */,
-				C98555A018F9D8C700D7D1C7 /* DSAAstronautCell.m */,
 				C98555A218F9DF9800D7D1C7 /* DSAEventCell.h */,
 				C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */,
 			);
@@ -313,6 +310,7 @@
 		4CB014F218FA346400E4B82F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C93F329B18FAFECA00288E26 /* Back.png */,
 				C93F329718FAF35B00288E26 /* icon_alert_active.png */,
 				C93F329818FAF35B00288E26 /* icon_alert_inactive.png */,
 				C93F328B18FAE2A100288E26 /* ContinueChevron.png */,
@@ -571,6 +569,7 @@
 				C93F329A18FAF35B00288E26 /* icon_alert_inactive.png in Resources */,
 				C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */,
 				4CD476F818F9B09F00E14178 /* Images.xcassets in Resources */,
+				C93F329C18FAFECA00288E26 /* Back.png in Resources */,
 				4CB014FF18FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */,
 				C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */,
 				C93F328A18FAE09D00288E26 /* Satellite.png in Resources */,
@@ -623,7 +622,6 @@
 				C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */,
 				C93F328018FACBC000288E26 /* DSADateConverter.m in Sources */,
 				C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */,
-				C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */,
 				C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */,
 				C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */,
 				4C61AD9918F9EF61009E585F /* DSATimelineDataSource.m in Sources */,

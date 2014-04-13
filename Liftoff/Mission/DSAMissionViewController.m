@@ -33,6 +33,12 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [self setNeedsStatusBarAppearanceUpdate];
     
+    topBar.layer.shadowOffset = CGSizeZero;
+    topBar.layer.shadowColor = [[UIColor blackColor] CGColor];
+    topBar.layer.shadowRadius = 3.0f;
+    topBar.layer.shadowOpacity = 0.3f;
+    topBar.layer.shadowPath = [[UIBezierPath bezierPathWithRect:topBar.layer.bounds] CGPath];
+    
     downButton.layer.cornerRadius = downButton.frame.size.width/2;
     downShadow.layer.cornerRadius = downButton.frame.size.width/2;
     
@@ -59,7 +65,22 @@
         typeImage.image = [UIImage imageNamed:@"Probe.png"];
     }
     
-    content.contentSize = CGSizeMake(self.view.frame.size.width, 1200);
+    content.contentSize = CGSizeMake(self.view.frame.size.width, 1300);
+    
+    nameLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:31.0];
+    agencyLabel.font = [UIFont fontWithName:@"Novecentosanswide-Light" size:26.0];
+    missionDescription.font = [UIFont fontWithName:@"Novecentosanswide-Light" size:16.0];
+    
+    missionTitle.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:17.0];
+    summaryTitle.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:16.0];
+    
+    dateTitle.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:16.0];
+    typeTitle.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:16.0];
+    
+    dateData.font = [UIFont fontWithName:@"Novecentosanswide-Light" size:16.0];
+    typeData.font = [UIFont fontWithName:@"Novecentosanswide-Light" size:16.0];
+    
+    eventTitle.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:16.0];
     
     {
         NSInteger maxHeight = 200;
@@ -79,6 +100,7 @@
         missionDescription.frame = CGRectMake(missionDescription.frame.origin.x, missionDescription.frame.origin.y, missionDescription.frame.size.width, frame.size.height);
         
         NSInteger offset = missionDescription.frame.size.height-160;
+        content.contentSize = CGSizeMake(self.view.frame.size.width, 1500+offset);
         NSLog(@"%ld", (long)offset);
         
         UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, content.contentSize.height)];
@@ -98,6 +120,9 @@
         [container addSubview:eventTable];
         [container addSubview:eventTimeline];
     }
+    {
+        eventTable.frame = CGRectMake(eventTable.frame.origin.x, eventTable.frame.origin.y, eventTable.frame.size.width, 100*3);
+    }
 }
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
@@ -116,13 +141,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == eventTable) {
         DSAEventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"eventCell"];
+        cell.index = indexPath;
         
         if (indexPath.row == 0) {
             cell.name.text = @"Launch";
+            cell.description.text = @"Launch";
         } else if (indexPath.row == 1) {
             cell.name.text = @"Arrival";
+            cell.description.text = @"Launch";
         } else if (indexPath.row == 2) {
             cell.name.text = @"Death";
+            cell.description.text = @"Launch";
         }
         
         return cell;

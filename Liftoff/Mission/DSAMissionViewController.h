@@ -17,6 +17,8 @@
 @interface DSAMissionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     IBOutlet UIScrollView *content;
     
+    IBOutlet UIImageView *topBar;
+    
     IBOutlet EGOImageView *missionImage;
     IBOutlet UIImageView *faderImage;
     
@@ -25,6 +27,9 @@
     IBOutlet UILabel *nameLabel;
     IBOutlet UILabel *agencyLabel;
     IBOutlet UILabel *statusLabel;
+    
+    IBOutlet UILabel *missionTitle;
+    IBOutlet UILabel *summaryTitle;
     
     IBOutlet UIButton *downButton;
     IBOutlet UIImageView *downShadow;

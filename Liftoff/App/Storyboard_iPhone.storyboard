@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="zRa-eh-myT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="DLH-m9-rrJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -352,11 +352,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tBw-Q5-Mvh" userLabel="Header Image" customClass="EGOImageView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                        <rect key="frame" x="0.0" y="20" width="320" height="498"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BDT-5B-LCb" userLabel="Header Fader">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                        <rect key="frame" x="0.0" y="20" width="320" height="498"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -444,24 +444,24 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zfH-dW-7d4" userLabel="Timeline">
-                                                            <rect key="frame" x="49" y="0.0" width="2" height="100"/>
+                                                            <rect key="frame" x="29" y="0.0" width="2" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.80000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="py3-m6-BZz">
-                                                            <rect key="frame" x="20" y="20" width="60" height="61"/>
+                                                            <rect key="frame" x="20" y="40" width="20" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                            <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.90407636088709686" alpha="1" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rocket Launch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ci1-ik-sjn">
-                                                            <rect key="frame" x="88" y="20" width="182" height="21"/>
+                                                            <rect key="frame" x="71" y="27" width="182" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sometime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u6m-zk-dLW">
-                                                            <rect key="frame" x="88" y="47" width="182" height="21"/>
+                                                            <rect key="frame" x="71" y="51" width="182" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -471,8 +471,10 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
+                                                    <outlet property="description" destination="u6m-zk-dLW" id="rh3-yp-zKZ"/>
                                                     <outlet property="eventIcon" destination="py3-m6-BZz" id="nUD-ae-50X"/>
                                                     <outlet property="name" destination="Ci1-ik-sjn" id="g9d-VU-2Nn"/>
+                                                    <outlet property="timeline" destination="zfH-dW-7d4" id="RJu-Jg-Jsd"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -481,10 +483,11 @@
                                             <outlet property="delegate" destination="7Jh-Ab-qYn" id="4Rv-U0-Cf5"/>
                                         </connections>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hVO-yd-c8P">
-                                        <rect key="frame" x="20" y="20" width="49" height="44"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hVO-yd-c8P">
+                                        <rect key="frame" x="7" y="22" width="67" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Back">
+                                        <inset key="contentEdgeInsets" minX="10" minY="12" maxX="45" maxY="12"/>
+                                        <state key="normal" image="Back.png">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -535,6 +538,11 @@
                                     <outlet property="delegate" destination="7Jh-Ab-qYn" id="UUK-E6-ZZD"/>
                                 </connections>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8Xv-xH-ofc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.15686274510000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.15686274510000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -556,8 +564,11 @@
                         <outlet property="faderImage" destination="BDT-5B-LCb" id="lyw-HG-yz2"/>
                         <outlet property="missionDescription" destination="vvK-Jm-OzI" id="FSK-ul-rkk"/>
                         <outlet property="missionImage" destination="tBw-Q5-Mvh" id="yEy-JH-bpy"/>
+                        <outlet property="missionTitle" destination="aXf-zi-GOU" id="qtP-Lm-KRt"/>
                         <outlet property="nameLabel" destination="NNG-0k-I1S" id="QAp-Mm-TcK"/>
+                        <outlet property="summaryTitle" destination="qWu-gk-eeA" id="xTc-DH-j7E"/>
                         <outlet property="titleLabel" destination="qWu-gk-eeA" id="izA-eM-3OJ"/>
+                        <outlet property="topBar" destination="8Xv-xH-ofc" id="MMX-Nt-MRx"/>
                         <outlet property="typeData" destination="Bom-ao-iwX" id="47b-8U-P3u"/>
                         <outlet property="typeImage" destination="0fE-b2-WCt" id="ngQ-Uz-mnu"/>
                         <outlet property="typeTitle" destination="19v-ca-8Ho" id="5NV-sT-443"/>
@@ -612,6 +623,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back.png" width="25" height="45"/>
         <image name="Calendar.png" width="96" height="115"/>
         <image name="ContinueChevron.png" width="90" height="51"/>
         <image name="ISS.png" width="1000" height="1600"/>
