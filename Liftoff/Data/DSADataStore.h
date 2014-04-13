@@ -10,6 +10,7 @@
 
 @property (strong, readonly, nonatomic) NSArray *missions;
 @property (strong, readonly, nonatomic) NSArray *events;
+@property (strong, readonly, nonatomic) NSArray *launches;
 
 + (instancetype)sharedInstance;
 

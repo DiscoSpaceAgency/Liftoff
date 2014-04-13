@@ -10,4 +10,9 @@
 
 @implementation DSALaunch
 
++ (instancetype)launchFromDict:(NSDictionary *)keyDict {
+    return nil;
+    
+}
+
 @end

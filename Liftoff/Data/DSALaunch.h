@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) NSString *launchVehicle;
 @property (strong, nonatomic) NSString *payload;
+@property (strong, nonatomic) NSString *vehicle;
 @property (strong, nonatomic) NSDate *date;
+
++ (instancetype)launchFromDict:(NSDictionary *)keyDict;
 
 @end

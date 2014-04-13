@@ -34,6 +34,7 @@
 		4CD4770118F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
 		4CD4770918F9B09F00E14178 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4770718F9B09F00E14178 /* InfoPlist.strings */; };
 		4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4770A18F9B09F00E14178 /* LiftoffTests.m */; };
+		C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C953A5C618FA4F5400131EA4 /* DSALaunch.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
 		C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985557718F9B4C400D7D1C7 /* DSAMissionViewController.m */; };
@@ -53,6 +54,7 @@
 		C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */; };
 		C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */; };
 		C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */; };
+		C98555BB18FA45BE00D7D1C7 /* DSALaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555BA18FA45BE00D7D1C7 /* DSALaunchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		4CD4770618F9B09F00E14178 /* LiftoffTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiftoffTests-Info.plist"; sourceTree = "<group>"; };
 		4CD4770818F9B09F00E14178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CD4770A18F9B09F00E14178 /* LiftoffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftoffTests.m; sourceTree = "<group>"; };
+		C953A5C518FA4F5400131EA4 /* DSALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSALaunch.h; sourceTree = "<group>"; };
+		C953A5C618FA4F5400131EA4 /* DSALaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunch.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
 		C985557618F9B4C400D7D1C7 /* DSAMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAMissionViewController.h; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayout.m"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayout.m"; sourceTree = "<group>"; };
 		C98555AF18F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutPredicate.h"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayoutPredicate.h"; sourceTree = "<group>"; };
 		C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayoutPredicate.m"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
+		C98555B918FA45BE00D7D1C7 /* DSALaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSALaunchViewController.h; path = Liftoff/Launches/DSALaunchViewController.h; sourceTree = SOURCE_ROOT; };
+		C98555BA18FA45BE00D7D1C7 /* DSALaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSALaunchViewController.m; path = Liftoff/Launches/DSALaunchViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +166,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C12A10C18F9B921002F9AEE /* Mission */ = {
+		4C12A10C18F9B921002F9AEE /* Missions */ = {
 			isa = PBXGroup;
 			children = (
 				C985557618F9B4C400D7D1C7 /* DSAMissionViewController.h */,
@@ -172,6 +178,7 @@
 				C98555A218F9DF9800D7D1C7 /* DSAEventCell.h */,
 				C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */,
 			);
+			name = Missions;
 			path = Mission;
 			sourceTree = "<group>";
 		};
@@ -214,6 +221,8 @@
 				4C12A11118F9BB71002F9AEE /* DSAMission.m */,
 				4C12A11418F9BB87002F9AEE /* DSAEvent.h */,
 				4C12A11518F9BB87002F9AEE /* DSAEvent.m */,
+				C953A5C518FA4F5400131EA4 /* DSALaunch.h */,
+				C953A5C618FA4F5400131EA4 /* DSALaunch.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -278,7 +287,8 @@
 			children = (
 				4C12A10E18F9B95A002F9AEE /* App */,
 				4C12A10F18F9BAB7002F9AEE /* Data */,
-				4C12A10C18F9B921002F9AEE /* Mission */,
+				C98555B818FA3F8F00D7D1C7 /* Launches */,
+				4C12A10C18F9B921002F9AEE /* Missions */,
 				4C12A10D18F9B926002F9AEE /* Timeline */,
 				4CB014F018FA345700E4B82F /* Assets */,
 				4CD476F718F9B09F00E14178 /* Images.xcassets */,
@@ -360,6 +370,16 @@
 				C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */,
 			);
 			name = AutoLayout;
+			sourceTree = "<group>";
+		};
+		C98555B818FA3F8F00D7D1C7 /* Launches */ = {
+			isa = PBXGroup;
+			children = (
+				C98555B918FA45BE00D7D1C7 /* DSALaunchViewController.h */,
+				C98555BA18FA45BE00D7D1C7 /* DSALaunchViewController.m */,
+			);
+			name = Launches;
+			path = Mission;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,12 +493,14 @@
 				C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */,
 				C985559818F9D79800D7D1C7 /* EGOImageView.m in Sources */,
 				C985559618F9D79800D7D1C7 /* EGOImageLoadConnection.m in Sources */,
+				C98555BB18FA45BE00D7D1C7 /* DSALaunchViewController.m in Sources */,
 				C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
 				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
 				C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */,
 				4C61AD9E18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */,
 				C985559518F9D79800D7D1C7 /* EGOImageButton.m in Sources */,
 				4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */,
+				C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */,
 				C985559918F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m in Sources */,
 				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */,
