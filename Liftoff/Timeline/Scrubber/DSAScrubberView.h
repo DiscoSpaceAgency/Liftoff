@@ -10,4 +10,11 @@
 
 @interface DSAScrubberView : UIView
 
+@property (readonly, nonatomic) NSInteger maxX;
+@property (readonly, nonatomic) NSInteger minX;
+@property (readonly, nonatomic) UILabel *dateLabel;
+@property (readonly, nonatomic) UIView *dateMarker;
+
+- (NSString *)textForDate:(NSDate *)date;
+
 @end

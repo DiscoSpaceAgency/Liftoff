@@ -20,6 +20,8 @@
 		4C61AD9F18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */; };
 		4CA79CD518FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
 		4CA79CD618FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
+		4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD818FA62F80008966B /* DSAScrubberManager.m */; };
+		4CA79CDA18FA62F80008966B /* DSAScrubberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD818FA62F80008966B /* DSAScrubberManager.m */; };
 		4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB014F518FA356A00E4B82F /* Novecentosanswide-DemiBold.otf */; };
 		4CB014FE18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB014F518FA356A00E4B82F /* Novecentosanswide-DemiBold.otf */; };
 		4CB014FF18FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB014F618FA356A00E4B82F /* Novecentosanswide-Light.otf */; };
@@ -86,6 +88,8 @@
 		4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineOffsetManager.m; sourceTree = "<group>"; };
 		4CA79CD318FA54250008966B /* DSAScrubberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberView.h; sourceTree = "<group>"; };
 		4CA79CD418FA54250008966B /* DSAScrubberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAScrubberView.m; sourceTree = "<group>"; };
+		4CA79CD718FA62F80008966B /* DSAScrubberManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberManager.h; sourceTree = "<group>"; };
+		4CA79CD818FA62F80008966B /* DSAScrubberManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAScrubberManager.m; sourceTree = "<group>"; };
 		4CB014F518FA356A00E4B82F /* Novecentosanswide-DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentosanswide-DemiBold.otf"; sourceTree = "<group>"; };
 		4CB014F618FA356A00E4B82F /* Novecentosanswide-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentosanswide-Light.otf"; sourceTree = "<group>"; };
 		4CD476E218F9B09F00E14178 /* Liftoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +241,8 @@
 			children = (
 				4CA79CD318FA54250008966B /* DSAScrubberView.h */,
 				4CA79CD418FA54250008966B /* DSAScrubberView.m */,
+				4CA79CD718FA62F80008966B /* DSAScrubberManager.h */,
+				4CA79CD818FA62F80008966B /* DSAScrubberManager.m */,
 			);
 			path = Scrubber;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */,
 				C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */,
 				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
 				4C61AD9A18F9EF61009E585F /* DSATimelineViewCell.m in Sources */,
@@ -537,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA79CDA18FA62F80008966B /* DSAScrubberManager.m in Sources */,
 				4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */,
 				4CA79CD618FA54250008966B /* DSAScrubberView.m in Sources */,
 				4C61AD9F18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */,
