@@ -12,6 +12,8 @@
 
 @interface DSATimelineViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *liftoffLabel;
+@property (strong, nonatomic) IBOutlet UIView *scrubberView;
 @property (strong, nonatomic) IBOutlet UITableView *timelineTable;
 @property (strong, nonatomic) DSATimelineDataSource *dataSource;
 @property (strong, nonatomic) UIPanGestureRecognizer *panRecognizer;
