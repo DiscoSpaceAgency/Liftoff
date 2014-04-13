@@ -7,6 +7,7 @@
 //
 
 #import "DSAMissionViewController.h"
+#import "DSADateConverter.h"
 
 @interface DSAMissionViewController ()
 
@@ -32,27 +33,33 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    if (!self.mission) {
-        DSAMission *mission = [[DSAMission alloc] init];
-        mission.name = @"ISS";
-        mission.imageURL = [NSURL URLWithString:@"http://upload.wikimedia.org/wikipedia/commons/6/60/ISSFinalConfigEnd2006.jpg"];
-        mission.quickDescription = @"CHAMP generated, for the first time, simultaneously highly precise gravity and magnetic field measurements over a 10 year period.";
-        
-        self.mission = mission;
-    }
-    
     downButton.layer.cornerRadius = downButton.frame.size.width/2;
     downShadow.layer.cornerRadius = downButton.frame.size.width/2;
     
     nameLabel.text = self.mission.name;
     agencyLabel.text = self.mission.agencyString;
-    statusLabel.text = @"In low earth orbit"; //?
     
     missionDescription.text = self.mission.quickDescription;
     
     missionImage.imageURL = self.mission.imageURL;
     
-    content.contentSize = CGSizeMake(self.view.frame.size.width, 2000);
+    dateData.text = [[DSADateConverter sharedInstance] dateStringFromDate:self.mission.startDate];
+    
+    if (self.mission.type == kDSAMissionTypeSatellite) {
+        typeData.text = @"Satellite";
+        typeImage.image = [UIImage imageNamed:@"Satellite.png"];
+    } else if (self.mission.type == kDSAMissionTypeRover) {
+        typeData.text = @"Rover";
+        typeImage.image = [UIImage imageNamed:@"Rover.png"];
+    } else if (self.mission.type == kDSAMissionTypeManned) {
+        typeData.text = @"Manned";
+        typeImage.image = [UIImage imageNamed:@"Manned.png"];
+    } else {
+        typeData.text = @"Other";
+        typeImage.image = [UIImage imageNamed:@"Probe.png"];
+    }
+    
+    content.contentSize = CGSizeMake(self.view.frame.size.width, 1200);
     
     {
         NSInteger maxHeight = 200;

@@ -46,6 +46,13 @@
 		C93F327A18FAC0E400288E26 /* DSANextLaunchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F327918FAC0E400288E26 /* DSANextLaunchCell.m */; };
 		C93F327D18FAC0F800288E26 /* DSALaunchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F327C18FAC0F800288E26 /* DSALaunchCell.m */; };
 		C93F328018FACBC000288E26 /* DSADateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F327F18FACBC000288E26 /* DSADateConverter.m */; };
+		C93F328618FAE09D00288E26 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328118FAE09D00288E26 /* Calendar.png */; };
+		C93F328718FAE09D00288E26 /* Manned.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328218FAE09D00288E26 /* Manned.png */; };
+		C93F328818FAE09D00288E26 /* Probe.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328318FAE09D00288E26 /* Probe.png */; };
+		C93F328918FAE09D00288E26 /* Rover.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328418FAE09D00288E26 /* Rover.png */; };
+		C93F328A18FAE09D00288E26 /* Satellite.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328518FAE09D00288E26 /* Satellite.png */; };
+		C93F328C18FAE2A100288E26 /* ContinueChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328B18FAE2A100288E26 /* ContinueChevron.png */; };
+		C93F329018FAE81300288E26 /* DSASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F328F18FAE81300288E26 /* DSASettingsViewController.m */; };
 		C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C953A5C618FA4F5400131EA4 /* DSALaunch.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
@@ -127,6 +134,14 @@
 		C93F327C18FAC0F800288E26 /* DSALaunchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunchCell.m; sourceTree = "<group>"; };
 		C93F327E18FACBC000288E26 /* DSADateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSADateConverter.h; sourceTree = "<group>"; };
 		C93F327F18FACBC000288E26 /* DSADateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSADateConverter.m; sourceTree = "<group>"; };
+		C93F328118FAE09D00288E26 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
+		C93F328218FAE09D00288E26 /* Manned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Manned.png; sourceTree = "<group>"; };
+		C93F328318FAE09D00288E26 /* Probe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Probe.png; sourceTree = "<group>"; };
+		C93F328418FAE09D00288E26 /* Rover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rover.png; sourceTree = "<group>"; };
+		C93F328518FAE09D00288E26 /* Satellite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Satellite.png; sourceTree = "<group>"; };
+		C93F328B18FAE2A100288E26 /* ContinueChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContinueChevron.png; sourceTree = "<group>"; };
+		C93F328E18FAE81300288E26 /* DSASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSASettingsViewController.h; sourceTree = "<group>"; };
+		C93F328F18FAE81300288E26 /* DSASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSASettingsViewController.m; sourceTree = "<group>"; };
 		C953A5C518FA4F5400131EA4 /* DSALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSALaunch.h; sourceTree = "<group>"; };
 		C953A5C618FA4F5400131EA4 /* DSALaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunch.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -291,6 +306,12 @@
 		4CB014F218FA346400E4B82F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C93F328B18FAE2A100288E26 /* ContinueChevron.png */,
+				C93F328118FAE09D00288E26 /* Calendar.png */,
+				C93F328218FAE09D00288E26 /* Manned.png */,
+				C93F328318FAE09D00288E26 /* Probe.png */,
+				C93F328418FAE09D00288E26 /* Rover.png */,
+				C93F328518FAE09D00288E26 /* Satellite.png */,
 				C93F327618FAC06500288E26 /* ISS.png */,
 			);
 			path = Images;
@@ -334,6 +355,7 @@
 				C98555B818FA3F8F00D7D1C7 /* Launches */,
 				4C12A10C18F9B921002F9AEE /* Missions */,
 				4C12A10D18F9B926002F9AEE /* Timeline */,
+				C93F328D18FAE7B600288E26 /* Settings */,
 				4CB014F018FA345700E4B82F /* Assets */,
 				4CD476F718F9B09F00E14178 /* Images.xcassets */,
 				4CD476EC18F9B09F00E14178 /* Supporting Files */,
@@ -369,6 +391,16 @@
 				4CD4770718F9B09F00E14178 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C93F328D18FAE7B600288E26 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C93F328E18FAE81300288E26 /* DSASettingsViewController.h */,
+				C93F328F18FAE81300288E26 /* DSASettingsViewController.m */,
+			);
+			name = Settings;
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 		C985557F18F9D74100D7D1C7 /* EGOImageLoader */ = {
@@ -512,12 +544,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */,
+				C93F328C18FAE2A100288E26 /* ContinueChevron.png in Resources */,
+				C93F328918FAE09D00288E26 /* Rover.png in Resources */,
+				C93F328718FAE09D00288E26 /* Manned.png in Resources */,
+				C93F328618FAE09D00288E26 /* Calendar.png in Resources */,
 				C93F327718FAC06600288E26 /* ISS.png in Resources */,
+				C93F328818FAE09D00288E26 /* Probe.png in Resources */,
 				4CD476F018F9B09F00E14178 /* InfoPlist.strings in Resources */,
 				C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */,
 				4CD476F818F9B09F00E14178 /* Images.xcassets in Resources */,
 				4CB014FF18FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */,
 				C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */,
+				C93F328A18FAE09D00288E26 /* Satellite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +578,7 @@
 			files = (
 				C93F327A18FAC0E400288E26 /* DSANextLaunchCell.m in Sources */,
 				4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */,
+				C93F329018FAE81300288E26 /* DSASettingsViewController.m in Sources */,
 				C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */,
 				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
 				4C61AD9A18F9EF61009E585F /* DSATimelineViewCell.m in Sources */,
