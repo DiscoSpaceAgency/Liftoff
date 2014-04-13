@@ -34,7 +34,7 @@
     self = [super init];
     if (self) {
         _isTableScrolling = NO;
-        _offset = 0;
+        _offset = -[DSATimelineWidthCalculator position:NSDate.date];
         _maxOffset = -[DSATimelineWidthCalculator maxPosition];
     }
     return self;
