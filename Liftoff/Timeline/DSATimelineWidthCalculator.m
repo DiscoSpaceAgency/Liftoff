@@ -34,7 +34,7 @@
 float monthWidth(int month, int year)
 {
     const NSInteger todayYear = [DSADataStore sharedInstance].todayYear;
-    return 80 * exp(- pow(((year + (month - 1)/12.0) - todayYear), 2) / (2*pow(2,2)));
+    return 10 * exp(- pow(((year + (month - 1)/12.0) - todayYear), 2) / (2*pow(9,2)));
 }
 
 + (NSInteger)position:(NSDate *)date
@@ -53,7 +53,7 @@ float monthWidth(int month, int year)
     }
 
     const NSInteger minYear = [DSADataStore sharedInstance].minYear;
-    NSAssert(dateYear >= minYear, @"Given date is not in range of data");
+    NSAssert(dateYear >= minYear, @"Given date (%i) is not in range of data (>= %i)",dateYear, minYear);
 
     NSInteger position = 0;
     for (NSInteger year = minYear; year <= dateYear; year++) {

@@ -35,14 +35,14 @@
     return calendar;
 }
 
-- (void)panRecognized:(UIGestureRecognizer *)gestureRecognizer
+- (void)scrubRecognized:(UIGestureRecognizer *)gestureRecognizer
 {
     NSInteger dateX = (NSInteger)[gestureRecognizer locationInView:gestureRecognizer.view].x;
     dateX = MAX(MIN(dateX, _scrubberView.maxX), _scrubberView.minX);
     CGFloat dateFloat = ((CGFloat)dateX - (CGFloat)_scrubberView.minX)/((CGFloat)_scrubberView.maxX - (CGFloat)_scrubberView.minX)*((CGFloat)[DSADataStore sharedInstance].maxYear - (CGFloat)[DSADataStore sharedInstance].minYear);
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
-    dateComponents.year = (NSInteger)floorf(dateFloat) + [DSADataStore sharedInstance].minYear;
-    dateComponents.month = (NSInteger)ceilf((dateFloat - dateComponents.year + [DSADataStore sharedInstance].minYear)*12.0);
+    dateComponents.year = (NSInteger)dateFloat + [DSADataStore sharedInstance].minYear;
+    dateComponents.month = (NSInteger)ceilf((dateFloat - dateComponents.year + [DSADataStore sharedInstance].minYear)*12.0+1);
     NSDate *date = [self.calendar dateFromComponents:dateComponents];
 
     [_scrubberView.dateMarker setCenter:CGPointMake(dateX, _scrubberView.dateMarker.center.y)];

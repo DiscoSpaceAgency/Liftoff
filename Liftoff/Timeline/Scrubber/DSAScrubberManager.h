@@ -14,6 +14,6 @@
 
 + (instancetype)sharedInstance;
 
-- (void)panRecognized:(UIPanGestureRecognizer *)gestureRecognizer;
+- (void)scrubRecognized:(UIPanGestureRecognizer *)gestureRecognizer;
 
 @end

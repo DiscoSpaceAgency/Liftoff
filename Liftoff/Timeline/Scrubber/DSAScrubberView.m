@@ -56,9 +56,9 @@
     [_dateMarker setBackgroundColor:[UIColor colorWithRed:0.56 green:0.09 blue:0.06 alpha:1]];
     [self addSubview:_dateMarker];
 
-    _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSAScrubberManager sharedInstance] action:@selector(panRecognized:)];
+    _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSAScrubberManager sharedInstance] action:@selector(scrubRecognized:)];
     [self addGestureRecognizer:_panRecognizer];
-    _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:[DSAScrubberManager sharedInstance] action:@selector(panRecognized:)];
+    _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:[DSAScrubberManager sharedInstance] action:@selector(scrubRecognized:)];
     [self addGestureRecognizer:_tapRecognizer];
     [[DSAScrubberManager sharedInstance] setScrubberView:self];
 }
