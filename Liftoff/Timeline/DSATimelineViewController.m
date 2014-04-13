@@ -22,11 +22,6 @@
 
 @implementation DSATimelineViewController
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -41,6 +36,10 @@
     [_timelineTable setDataSource:_dataSource];
     [_timelineTable setDelegate:[DSATimelineOffsetManager sharedInstance]];
     [[DSATimelineOffsetManager sharedInstance] setTimelineTable:_timelineTable];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

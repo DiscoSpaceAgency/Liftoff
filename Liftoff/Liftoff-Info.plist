@@ -44,6 +44,8 @@
 		<string>Novecentosanswide-Light.otf</string>
 		<string>Novecentosanswide-DemiBold.otf</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

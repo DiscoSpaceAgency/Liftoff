@@ -62,7 +62,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIFTOFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZ7-fN-BiV">
-                                <rect key="frame" x="20" y="25" width="280" height="25"/>
+                                <rect key="frame" x="20" y="29" width="280" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -73,6 +73,7 @@
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="FKD-x4-hff"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="liftoffLabel" destination="EZ7-fN-BiV" id="pDg-Vx-Rgz"/>
                         <outlet property="scrubberView" destination="ZJJ-1x-eg6" id="MJa-86-tpX"/>
