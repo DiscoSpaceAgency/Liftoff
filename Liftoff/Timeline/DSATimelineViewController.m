@@ -7,8 +7,14 @@
 //
 
 #import "DSATimelineViewController.h"
+#import "DSATimelineDataSource.h"
+#import "DSATimelineOffsetManager.h"
 
 @interface DSATimelineViewController ()
+
+@property (strong, nonatomic) IBOutlet UITableView *timelineTable;
+@property (strong, nonatomic) DSATimelineDataSource *dataSource;
+@property (strong, nonatomic) UIPanGestureRecognizer *panRecognizer;
 
 @end
 
@@ -27,23 +33,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
+    _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSATimelineOffsetManager sharedInstance] action:@selector(panRecognized:)];
+    [_panRecognizer setDelegate:[DSATimelineOffsetManager sharedInstance]];
+    [self.view addGestureRecognizer:_panRecognizer];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    _dataSource = [[DSATimelineDataSource alloc] init];
+    [_timelineTable setDataSource:_dataSource];
+    [_timelineTable setDelegate:[DSATimelineOffsetManager sharedInstance]];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

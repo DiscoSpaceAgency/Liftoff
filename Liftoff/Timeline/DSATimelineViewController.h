@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Disco Space Agency. All rights reserved.
 //
 
-@interface DSATimelineViewController : UIViewController <UITableViewDelegate>
-
-
+@interface DSATimelineViewController : UIViewController
 
 @end
