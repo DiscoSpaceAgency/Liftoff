@@ -12,6 +12,10 @@
 @property (strong, readonly, nonatomic) NSArray *events;
 @property (strong, readonly, nonatomic) NSArray *launches;
 
+@property (readonly, nonatomic) NSInteger minYear;
+@property (readonly, nonatomic) NSInteger maxYear;
+@property (readonly, nonatomic) NSInteger todayYear;
+
 + (instancetype)sharedInstance;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DSATimelineWidthCalculator.h"
+#import "DSADataStore.h"
 
 @implementation DSATimelineWidthCalculator
 
@@ -32,7 +33,8 @@
 
 float monthWidth(int month, int year)
 {
-    return 160 * exp(- pow(((year + (month - 1) / 12.0) - 2014),2) / (2*pow(1,2)));
+    const NSInteger todayYear = [DSADataStore sharedInstance].todayYear;
+    return 160 * exp(- pow(((year + (month - 1)/12.0) - todayYear), 2) / (2*pow(1,2)));
 }
 
 + (NSInteger)position:(NSDate *)date
@@ -50,8 +52,11 @@ float monthWidth(int month, int year)
         return [[self memos][originalDate] integerValue];
     }
 
+    const NSInteger minYear = [DSADataStore sharedInstance].minYear;
+    NSAssert(dateYear >= minYear, @"Given date is not in range of data");
+
     NSInteger position = 0;
-    for (NSInteger year = 1996; year <= dateYear; year++) {
+    for (NSInteger year = minYear; year <= dateYear; year++) {
         [memoDateComponents setYear:year];
         for (NSInteger month = 1; month <= 12; month++) {
             if (year == dateYear && month > dateMonth) {
@@ -67,11 +72,7 @@ float monthWidth(int month, int year)
 
 + (NSInteger)maxPosition
 {
-    NSDateComponents *maxDateComponents = [[NSDateComponents alloc] init];
-    maxDateComponents.year = 2024;
-    maxDateComponents.month = 4;
-    NSDate *maxDate = [self.calendar dateFromComponents:maxDateComponents];
-    return [self position:maxDate];
+    return [self position:[[DSADataStore sharedInstance].missions valueForKeyPath:@"@max.endDate"]];
 }
 
 + (NSInteger)widthForStart:(NSDate *)startDate end:(NSDate *)endDate

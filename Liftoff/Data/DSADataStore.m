@@ -31,6 +31,10 @@
     if (self) {
         _missions = @[];
         _events = @[];
+        _launches = @[];
+        _minYear = 0;
+        _maxYear = 0;
+        _todayYear = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:[NSDate date]].year;
     }
     return self;
 }
@@ -50,10 +54,14 @@
     }];
     
     _launches = [[DSADataGrabber sharedInstance] getAllLaunches];
-    
     _launches = [_launches sortedArrayUsingComparator:^NSComparisonResult(DSALaunch *launch1, DSALaunch *launch2) {
         return [launch1.date compare:launch2.date];
     }];
+
+    NSDate *minDate = (NSDate *)[_missions valueForKeyPath:@"@min.startDate"];
+    NSDate *maxDate = (NSDate *)[_missions valueForKeyPath:@"@max.startDate"];
+    _minYear = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:minDate].year;
+    _maxYear = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:maxDate].year;
 }
 
 @end

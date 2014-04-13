@@ -8,6 +8,7 @@
 
 #import "DSAScrubberView.h"
 #import "DSAScrubberManager.h"
+#import "DSADataStore.h"
 
 @interface DSAScrubberView ()
 
@@ -24,8 +25,8 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    NSInteger minYear = 1994;
-    NSInteger maxYear = 2024;
+    NSInteger minYear = [DSADataStore sharedInstance].minYear;
+    NSInteger maxYear = [DSADataStore sharedInstance].maxYear;
     NSDateComponents *todayDateComponents = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:[NSDate date]];
     NSInteger todayYear = todayDateComponents.year;
 
