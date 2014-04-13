@@ -12,7 +12,9 @@
 
 @interface DSATimelineViewController ()
 
-@property (strong, nonatomic) IBOutlet UILabel *liftoffLabel;
+@property (strong, nonatomic) IBOutlet UIButton *liftoffButton;
+@property (strong, nonatomic) IBOutlet UIButton *eventsButton;
+@property (strong, nonatomic) IBOutlet UIButton *settingsButton;
 @property (strong, nonatomic) IBOutlet UIView *scrubberView;
 @property (strong, nonatomic) IBOutlet UITableView *timelineTable;
 @property (strong, nonatomic) DSATimelineDataSource *dataSource;
@@ -26,7 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [_liftoffLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:24.0]];
+    [_liftoffButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:24.0]];
+    [_eventsButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0]];
 
     _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSATimelineOffsetManager sharedInstance] action:@selector(panRecognized:)];
     [_panRecognizer setDelegate:[DSATimelineOffsetManager sharedInstance]];
@@ -40,6 +43,9 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+- (IBAction)today {
+    [[DSATimelineOffsetManager sharedInstance] todayRecognized];
 }
 
 @end

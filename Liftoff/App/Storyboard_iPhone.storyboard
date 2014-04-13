@@ -61,22 +61,48 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIFTOFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EZ7-fN-BiV">
-                                <rect key="frame" x="20" y="29" width="280" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fr6-ob-CYA">
+                                <rect key="frame" x="244" y="26" width="56" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="EVENTS">
+                                    <color key="titleColor" red="0.56470588235294117" green="0.090196078431372548" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Bc-jq-Tre">
+                                <rect key="frame" x="20" y="20" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zEG-3C-FL5">
+                                <rect key="frame" x="84" y="26" width="152" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LIFTOFF">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="today" destination="eHN-Fn-oPG" eventType="touchUpInside" id="wpU-26-tC6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.15686274509803921" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.56470588239999997" green="0.090196078430000007" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="FKD-x4-hff"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="liftoffLabel" destination="EZ7-fN-BiV" id="pDg-Vx-Rgz"/>
+                        <outlet property="eventsButton" destination="fr6-ob-CYA" id="XPw-oq-WWN"/>
+                        <outlet property="liftoffButton" destination="zEG-3C-FL5" id="cXk-q3-0Q9"/>
                         <outlet property="scrubberView" destination="ZJJ-1x-eg6" id="MJa-86-tpX"/>
+                        <outlet property="settingsButton" destination="7Bc-jq-Tre" id="fQn-p8-QEH"/>
                         <outlet property="timelineTable" destination="EWg-t5-5SW" id="1ow-7p-y9o"/>
                         <segue destination="7Jh-Ab-qYn" kind="push" identifier="showMission" id="grn-S0-kXM"/>
                     </connections>

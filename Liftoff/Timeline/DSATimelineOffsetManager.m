@@ -75,6 +75,12 @@
     }
 }
 
+- (void)todayRecognized
+{
+    _offset = -[DSATimelineWidthCalculator position:NSDate.date];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelinePan" object:self userInfo:@{@"translate": @(_offset)}];
+}
+
 - (void)scrub:(NSNotification *)notification
 {
     _offset = [notification.userInfo[@"translate"] integerValue];

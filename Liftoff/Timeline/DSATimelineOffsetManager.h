@@ -14,5 +14,6 @@
 + (instancetype)sharedInstance;
 
 - (void)panRecognized:(UIPanGestureRecognizer *)gestureRecognizer;
+- (void)todayRecognized;
 
 @end
