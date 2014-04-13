@@ -79,6 +79,9 @@
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
     return NO;
 }
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LaunchScroll" object:nil];
+}
 
 - (void)didReceiveMemoryWarning
 {

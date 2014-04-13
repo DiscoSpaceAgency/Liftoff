@@ -19,20 +19,20 @@
         self.watchLive.layer.borderColor = [UIColor whiteColor].CGColor;
         self.watchLive.layer.borderWidth = 1;
         self.watchLive.layer.masksToBounds = YES;
-        
-        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
     }
     return self;
+}
+- (void)awakeFromNib {
+    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
+    [runloop addTimer:timer forMode:NSRunLoopCommonModes];
+    [runloop addTimer:timer forMode:UITrackingRunLoopMode];
 }
 
 - (void)updateCountdown {
     self.timeLabel.text = [[DSADateConverter sharedInstance] timeUntilDate:self.date];
 }
 
-- (void)awakeFromNib
-{
-    // Initialization code
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
