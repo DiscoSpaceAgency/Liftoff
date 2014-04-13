@@ -25,13 +25,14 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [_liftoffLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:19.0]];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [_liftoffLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:24.0]];
+
     _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSATimelineOffsetManager sharedInstance] action:@selector(panRecognized:)];
     [_panRecognizer setDelegate:[DSATimelineOffsetManager sharedInstance]];
     [_timelineTable addGestureRecognizer:_panRecognizer];
