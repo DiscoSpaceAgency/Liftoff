@@ -10,6 +10,8 @@
 
 @implementation DSAMission
 
+id nilForReal(id arg) { return ((arg == [NSNull null]) ? nil : arg); }
+
 + (instancetype)missionFromJSON:(NSDictionary *)jsonDict
 {
     DSAMission *mission = [[DSAMission alloc] init];
@@ -43,8 +45,8 @@
     mission.type = [jsonDict[@"type"] integerValue];
     mission.websiteURL = [NSURL URLWithString:jsonDict[@"link"]];
     mission.imageURL = [NSURL URLWithString:jsonDict[@"image_link"]];
-    mission.quickDescription = jsonDict[@"quick_desc"];
-    mission.longDescription = jsonDict[@"long_desc"];
+    mission.quickDescription = nilForReal(jsonDict[@"quick_desc"]);
+    mission.longDescription = nilForReal(jsonDict[@"long_desc"]);
     mission.id = [jsonDict[@"id"] integerValue];
     return mission;
 }

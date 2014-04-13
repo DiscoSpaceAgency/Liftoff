@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) DSAMission *mission;
 
+- (CGRect)stripRect;
+
 @end

@@ -14,6 +14,8 @@
 
 @implementation DSAMissionViewController
 
+@synthesize missionImage;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,7 +45,7 @@
     downShadow.layer.cornerRadius = downButton.frame.size.width/2;
     
     nameLabel.text = self.mission.name;
-    agencyLabel.text = @"NASA, ESA, JAXA, CSA, RSA"; //?
+    agencyLabel.text = self.mission.agencyString;
     statusLabel.text = @"In low earth orbit"; //?
     
     missionDescription.text = self.mission.quickDescription;

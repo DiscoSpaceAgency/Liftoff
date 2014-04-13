@@ -107,4 +107,9 @@
     _isTableScrolling = NO;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelineSelect" object:self userInfo:@{@"indexPath": indexPath}];
+}
+
 @end
