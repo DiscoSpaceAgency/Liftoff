@@ -40,6 +40,21 @@
     _dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height/4)];
     _dateLabel.font = [UIFont fontWithName:@"NovecentosansWide-DemiBold" size:9.0];
     _dateLabel.textColor = [UIColor colorWithRed:0.56 green:0.09 blue:0.06 alpha:1];
+    _dateLabel.text = [self textForDate:[NSDate date]];
+}
+
+- (NSString *)textForDate:(NSDate *)date
+{
+    NSDateComponents *dateComponents = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:date];
+    NSInteger dateYear = dateComponents.year;
+    NSInteger dateMonth = dateComponents.month;
+
+    static NSArray *monthTexts = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        monthTexts = @[@"Jan",@"Feb",@"Mar",@"Apr",@"May",@"Jun",@"Jul",@"Aug",@"Sep",@"Oct",@"Nov",@"Dec"];
+    });
+    return [NSString stringWithFormat:@"%@ %i",monthTexts[dateMonth],dateYear];
 }
 
 @end
