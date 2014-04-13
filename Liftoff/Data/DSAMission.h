@@ -7,13 +7,15 @@
 //
 
 typedef NS_ENUM(NSUInteger, DSAAgency) {
-    DSAAgencyNASA,
-    DSAAgencyJAXA,
-    DSAAgencyESA,
-    DSAAgencyRoscosmos,
-    DSAAgencyCSA
+    kDSAAgencyNASA,
+    kDSAAgencyJAXA,
+    kDSAAgencyESA,
+    kDSAAgencyRSA,
+    kDSAAgencyCSA,
+    kDSAAgencyUnknown
 };
 typedef NS_ENUM(NSUInteger, DSAMissionType) {
+    kDSAMissionTypeUndefined = 100,
     kDSAMissionTypeSatellite = 1,
     kDSAMissionTypeRover = 2,
     kDSAMissionTypeManned = 3,
@@ -33,5 +35,7 @@ typedef NS_ENUM(NSUInteger, DSAMissionType) {
 @property (strong, nonatomic) NSString *longDescription;
 @property (readwrite, nonatomic) NSInteger id;
 @property (strong, nonatomic) NSArray *events;
+
++ (instancetype)missionFromJSON:(NSDictionary *)jsonDict;
 
 @end

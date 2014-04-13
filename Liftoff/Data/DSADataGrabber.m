@@ -9,6 +9,8 @@
 #define API_URL_PREFIX @"http://108.166.83.92/api/"
 
 #import "DSADataGrabber.h"
+#import "DSAMission.h"
+#import "DSAEvent.h"
 
 @implementation DSADataGrabber
 
@@ -43,10 +45,15 @@
         
         if (![JSON isKindOfClass:[NSArray class]]) {
             return @[];
-        } else {
-            return JSON;
         }
-    } else {
+
+        NSMutableArray *missions = [NSMutableArray arrayWithCapacity:JSON.count];
+        [JSON enumerateObjectsUsingBlock:^(NSDictionary *object, NSUInteger idx, BOOL *stop) {
+            [missions addObject:[DSAMission missionFromJSON:(NSDictionary *)object]];
+        }];
+        return missions;
+    }
+    else {
         // Problem...
         return @[];
     }

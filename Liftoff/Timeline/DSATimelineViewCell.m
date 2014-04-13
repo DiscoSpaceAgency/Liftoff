@@ -7,6 +7,16 @@
 //
 
 #import "DSATimelineViewCell.h"
+#import "DSAMission.h"
+#import "DSATimelineWidthCalculator.h"
+#import "DSATimelineOffsetManager.h"
+
+@interface DSATimelineViewCell ()
+
+@property (strong, nonatomic) IBOutlet UILabel *missionNameLabel;
+@property (strong, nonatomic) IBOutlet UIView *timelineStrip;
+
+@end
 
 @implementation DSATimelineViewCell
 
@@ -14,21 +24,32 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
     }
     return self;
 }
 
-- (void)awakeFromNib
+- (void)setMission:(DSAMission *)mission
 {
-    // Initialization code
+    _mission = mission;
+    if (mission) {
+        _missionNameLabel.text = _mission.name;
+        [_timelineStrip setFrame:CGRectMake(10 + [DSATimelineOffsetManager sharedInstance].offset + [DSATimelineWidthCalculator position:_mission.startDate], 22, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], 22)];
+    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"TimelinePan" object:nil];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (void)receiveNotification:(NSNotification *) notification
 {
-    [super setSelected:selected animated:animated];
+    NSInteger offset = [(NSNumber *)notification.userInfo[@"translate"] integerValue];
+    [_timelineStrip setFrame:CGRectMake(10 + offset + [DSATimelineWidthCalculator position:_mission.startDate], 22, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], 22)];
+}
 
-    // Configure the view for the selected state
+- (void)prepareForReuse
+{
+    _mission = nil;
+    _missionNameLabel.text = @"";
+    [_timelineStrip setFrame:CGRectMake(0, 22, self.frame.size.width, 22)];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

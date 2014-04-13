@@ -6,8 +6,10 @@
 //  Copyright (c) 2014 Disco Space Agency. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class DSAMission;
 
 @interface DSATimelineViewCell : UITableViewCell
+
+@property (weak, nonatomic) DSAMission *mission;
 
 @end

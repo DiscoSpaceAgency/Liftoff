@@ -7,11 +7,13 @@
 //
 
 #import "DSAAppDelegate.h"
+#import "DSADataStore.h"
 
 @implementation DSAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [DSADataStore sharedInstance];
     return YES;
 }
 

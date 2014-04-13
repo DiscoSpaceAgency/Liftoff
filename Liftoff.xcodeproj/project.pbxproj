@@ -13,6 +13,11 @@
 		4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11118F9BB71002F9AEE /* DSAMission.m */; };
 		4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11518F9BB87002F9AEE /* DSAEvent.m */; };
 		4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C12A11518F9BB87002F9AEE /* DSAEvent.m */; };
+		4C61AD9918F9EF61009E585F /* DSATimelineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9418F9EF61009E585F /* DSATimelineDataSource.m */; };
+		4C61AD9A18F9EF61009E585F /* DSATimelineViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9618F9EF61009E585F /* DSATimelineViewCell.m */; };
+		4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9818F9EF61009E585F /* DSATimelineWidthCalculator.m */; };
+		4C61AD9E18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */; };
+		4C61AD9F18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */; };
 		4CD476E618F9B09F00E14178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E518F9B09F00E14178 /* Foundation.framework */; };
 		4CD476E818F9B09F00E14178 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E718F9B09F00E14178 /* CoreGraphics.framework */; };
 		4CD476EA18F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
@@ -63,6 +68,14 @@
 		4C12A11118F9BB71002F9AEE /* DSAMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAMission.m; sourceTree = "<group>"; };
 		4C12A11418F9BB87002F9AEE /* DSAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAEvent.h; sourceTree = "<group>"; };
 		4C12A11518F9BB87002F9AEE /* DSAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAEvent.m; sourceTree = "<group>"; };
+		4C61AD9318F9EF61009E585F /* DSATimelineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineDataSource.h; sourceTree = "<group>"; };
+		4C61AD9418F9EF61009E585F /* DSATimelineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineDataSource.m; sourceTree = "<group>"; };
+		4C61AD9518F9EF61009E585F /* DSATimelineViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineViewCell.h; sourceTree = "<group>"; };
+		4C61AD9618F9EF61009E585F /* DSATimelineViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineViewCell.m; sourceTree = "<group>"; };
+		4C61AD9718F9EF61009E585F /* DSATimelineWidthCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineWidthCalculator.h; sourceTree = "<group>"; };
+		4C61AD9818F9EF61009E585F /* DSATimelineWidthCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineWidthCalculator.m; sourceTree = "<group>"; };
+		4C61AD9C18FA189F009E585F /* DSATimelineOffsetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineOffsetManager.h; sourceTree = "<group>"; };
+		4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineOffsetManager.m; sourceTree = "<group>"; };
 		4CD476E218F9B09F00E14178 /* Liftoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD476E518F9B09F00E14178 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CD476E718F9B09F00E14178 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +174,14 @@
 			children = (
 				4C12A10818F9B8C2002F9AEE /* DSATimelineViewController.h */,
 				4C12A10918F9B8C2002F9AEE /* DSATimelineViewController.m */,
+				4C61AD9318F9EF61009E585F /* DSATimelineDataSource.h */,
+				4C61AD9418F9EF61009E585F /* DSATimelineDataSource.m */,
+				4C61AD9518F9EF61009E585F /* DSATimelineViewCell.h */,
+				4C61AD9618F9EF61009E585F /* DSATimelineViewCell.m */,
+				4C61AD9718F9EF61009E585F /* DSATimelineWidthCalculator.h */,
+				4C61AD9818F9EF61009E585F /* DSATimelineWidthCalculator.m */,
+				4C61AD9C18FA189F009E585F /* DSATimelineOffsetManager.h */,
+				4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -409,13 +430,16 @@
 			files = (
 				C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */,
 				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
+				4C61AD9A18F9EF61009E585F /* DSATimelineViewCell.m in Sources */,
 				C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */,
 				C985559818F9D79800D7D1C7 /* EGOImageView.m in Sources */,
 				C985559618F9D79800D7D1C7 /* EGOImageLoadConnection.m in Sources */,
 				C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
 				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
 				C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */,
+				4C61AD9E18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */,
 				C985559518F9D79800D7D1C7 /* EGOImageButton.m in Sources */,
+				4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */,
 				C985559918F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m in Sources */,
 				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */,
@@ -426,6 +450,7 @@
 				C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */,
 				C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */,
 				C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */,
+				4C61AD9918F9EF61009E585F /* DSATimelineDataSource.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
 				C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */,
 				4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */,
@@ -437,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */,
+				4C61AD9F18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */,
 				4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */,
 				4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */,

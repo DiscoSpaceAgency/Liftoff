@@ -7,7 +7,26 @@
 //
 
 #import "DSATimelineDataSource.h"
+#import "DSADataStore.h"
+#import "DSATimelineViewCell.h"
 
 @implementation DSATimelineDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [DSADataStore sharedInstance].missions.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DSATimelineViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimelineCell"];
+    cell.mission = [DSADataStore sharedInstance].missions[indexPath.row];
+    return cell;
+}
 
 @end
