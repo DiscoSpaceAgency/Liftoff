@@ -36,6 +36,7 @@
         _isTableScrolling = NO;
         _offset = -[DSATimelineWidthCalculator position:NSDate.date];
         _maxOffset = -[DSATimelineWidthCalculator maxPosition];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrub:) name:@"ScrubberPan" object:nil];
     }
     return self;
 }
@@ -72,6 +73,11 @@
         _timelineTable.scrollEnabled = YES;
         _isTableScrolling = NO;
     }
+}
+
+- (void)scrub:(NSNotification *)notification
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelinePan" object:self userInfo:notification.userInfo];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView

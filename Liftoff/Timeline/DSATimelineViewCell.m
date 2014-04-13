@@ -54,10 +54,12 @@
 - (void)pan:(NSNotification *)notification
 {
     NSInteger offset = [(NSNumber *)notification.userInfo[@"translate"] integerValue];
-    [_timelineStrip setFrame:CGRectMake(10 + offset + [DSATimelineWidthCalculator position:_mission.startDate], 0, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], self.frame.size.height)];
-    CGFloat labelMinX = MAX(_timelineStrip.frame.origin.x + 10, 10);
-    [_missionNameLabel setFrame:CGRectMake(labelMinX, 10, self.frame.size.width - 40, 30)];
-    [_agencyLabel setFrame:CGRectMake(labelMinX, 35, self.frame.size.width - 40, 20)];
+    CGFloat labelX = MAX(20 + offset + [DSATimelineWidthCalculator position:MIN(_mission.startDate, _mission.endDate)], 10);
+    [UIView animateWithDuration:0.1 animations:^{
+        [_timelineStrip setFrame:CGRectMake(10 + offset + [DSATimelineWidthCalculator position:_mission.startDate], 0, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], self.frame.size.height)];
+        [_missionNameLabel setFrame:CGRectMake(labelX, 10, self.frame.size.width - 40, 30)];
+        [_agencyLabel setFrame:CGRectMake(labelX, 35, self.frame.size.width - 40, 20)];
+    }];
 }
 
 - (void)resetOffset:(NSNotification *)notification

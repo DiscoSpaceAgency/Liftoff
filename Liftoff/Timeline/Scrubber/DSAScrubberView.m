@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UILabel *dateLabel;
 @property (strong, nonatomic) UIView *dateMarker;
 @property (strong, nonatomic) UIPanGestureRecognizer *panRecognizer;
+@property (strong, nonatomic) UITapGestureRecognizer *tapRecognizer;
 @property (readwrite, nonatomic) NSInteger maxX;
 @property (readwrite, nonatomic) NSInteger minX;
 
@@ -57,6 +58,8 @@
 
     _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSAScrubberManager sharedInstance] action:@selector(panRecognized:)];
     [self addGestureRecognizer:_panRecognizer];
+    _tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:[DSAScrubberManager sharedInstance] action:@selector(panRecognized:)];
+    [self addGestureRecognizer:_tapRecognizer];
     [[DSAScrubberManager sharedInstance] setScrubberView:self];
 }
 
@@ -76,7 +79,7 @@
     static NSArray *monthTexts = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        monthTexts = @[@"Jan",@"Feb",@"Mar",@"Apr",@"May",@"Jun",@"Jul",@"Aug",@"Sep",@"Oct",@"Nov",@"Dec"];
+        monthTexts = @[@"ERR",@"Jan",@"Feb",@"Mar",@"Apr",@"May",@"Jun",@"Jul",@"Aug",@"Sep",@"Oct",@"Nov",@"Dec"];
     });
     return [NSString stringWithFormat:@"%@ %i",monthTexts[dateMonth],dateYear];
 }

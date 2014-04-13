@@ -34,7 +34,7 @@
 float monthWidth(int month, int year)
 {
     const NSInteger todayYear = [DSADataStore sharedInstance].todayYear;
-    return 160 * exp(- pow(((year + (month - 1)/12.0) - todayYear), 2) / (2*pow(1,2)));
+    return 80 * exp(- pow(((year + (month - 1)/12.0) - todayYear), 2) / (2*pow(2,2)));
 }
 
 + (NSInteger)position:(NSDate *)date
@@ -72,7 +72,7 @@ float monthWidth(int month, int year)
 
 + (NSInteger)maxPosition
 {
-    return [self position:[[DSADataStore sharedInstance].missions valueForKeyPath:@"@max.endDate"]];
+    return [self position:[[DSADataStore sharedInstance].missions valueForKeyPath:@"@max.startDate"]];
 }
 
 + (NSInteger)widthForStart:(NSDate *)startDate end:(NSDate *)endDate
