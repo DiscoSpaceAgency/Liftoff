@@ -53,15 +53,19 @@
         return [event1.date compare:event2.date];
     }];
     
-    _launches = [[DSADataGrabber sharedInstance] getAllLaunches];
-    _launches = [_launches sortedArrayUsingComparator:^NSComparisonResult(DSALaunch *launch1, DSALaunch *launch2) {
-        return [launch1.date compare:launch2.date];
-    }];
-
+    [self fetchLaunches];
+    
     NSDate *minDate = (NSDate *)[_missions valueForKeyPath:@"@min.startDate"];
     NSDate *maxDate = (NSDate *)[_missions valueForKeyPath:@"@max.startDate"];
     _minYear = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:minDate].year;
     _maxYear = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:maxDate].year;
+}
+
+- (void)fetchLaunches {
+    _launches = [[DSADataGrabber sharedInstance] getAllLaunches];
+    _launches = [_launches sortedArrayUsingComparator:^NSComparisonResult(DSALaunch *launch1, DSALaunch *launch2) {
+        return [launch1.date compare:launch2.date];
+    }];
 }
 
 @end

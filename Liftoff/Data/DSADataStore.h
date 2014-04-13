@@ -18,4 +18,6 @@
 
 + (instancetype)sharedInstance;
 
+- (void)fetchLaunches;
+
 @end

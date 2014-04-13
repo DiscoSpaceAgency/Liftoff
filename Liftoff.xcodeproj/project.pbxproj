@@ -52,7 +52,10 @@
 		C93F328918FAE09D00288E26 /* Rover.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328418FAE09D00288E26 /* Rover.png */; };
 		C93F328A18FAE09D00288E26 /* Satellite.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328518FAE09D00288E26 /* Satellite.png */; };
 		C93F328C18FAE2A100288E26 /* ContinueChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F328B18FAE2A100288E26 /* ContinueChevron.png */; };
-		C93F329018FAE81300288E26 /* DSASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F328F18FAE81300288E26 /* DSASettingsViewController.m */; };
+		C93F329318FAED8900288E26 /* DSANotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F329218FAED8900288E26 /* DSANotificationController.m */; };
+		C93F329618FAEDBA00288E26 /* DSASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F329518FAEDBA00288E26 /* DSASettingsViewController.m */; };
+		C93F329918FAF35B00288E26 /* icon_alert_active.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329718FAF35B00288E26 /* icon_alert_active.png */; };
+		C93F329A18FAF35B00288E26 /* icon_alert_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329818FAF35B00288E26 /* icon_alert_inactive.png */; };
 		C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C953A5C618FA4F5400131EA4 /* DSALaunch.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
@@ -140,8 +143,12 @@
 		C93F328418FAE09D00288E26 /* Rover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rover.png; sourceTree = "<group>"; };
 		C93F328518FAE09D00288E26 /* Satellite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Satellite.png; sourceTree = "<group>"; };
 		C93F328B18FAE2A100288E26 /* ContinueChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContinueChevron.png; sourceTree = "<group>"; };
-		C93F328E18FAE81300288E26 /* DSASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSASettingsViewController.h; sourceTree = "<group>"; };
-		C93F328F18FAE81300288E26 /* DSASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSASettingsViewController.m; sourceTree = "<group>"; };
+		C93F329118FAED8900288E26 /* DSANotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSANotificationController.h; path = Liftoff/Settings/DSANotificationController.h; sourceTree = SOURCE_ROOT; };
+		C93F329218FAED8900288E26 /* DSANotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSANotificationController.m; path = Liftoff/Settings/DSANotificationController.m; sourceTree = SOURCE_ROOT; };
+		C93F329418FAEDBA00288E26 /* DSASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSASettingsViewController.h; path = Liftoff/Settings/DSASettingsViewController.h; sourceTree = SOURCE_ROOT; };
+		C93F329518FAEDBA00288E26 /* DSASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSASettingsViewController.m; path = Liftoff/Settings/DSASettingsViewController.m; sourceTree = SOURCE_ROOT; };
+		C93F329718FAF35B00288E26 /* icon_alert_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_active.png; sourceTree = "<group>"; };
+		C93F329818FAF35B00288E26 /* icon_alert_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_inactive.png; sourceTree = "<group>"; };
 		C953A5C518FA4F5400131EA4 /* DSALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSALaunch.h; sourceTree = "<group>"; };
 		C953A5C618FA4F5400131EA4 /* DSALaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunch.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -306,6 +313,8 @@
 		4CB014F218FA346400E4B82F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C93F329718FAF35B00288E26 /* icon_alert_active.png */,
+				C93F329818FAF35B00288E26 /* icon_alert_inactive.png */,
 				C93F328B18FAE2A100288E26 /* ContinueChevron.png */,
 				C93F328118FAE09D00288E26 /* Calendar.png */,
 				C93F328218FAE09D00288E26 /* Manned.png */,
@@ -396,8 +405,10 @@
 		C93F328D18FAE7B600288E26 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				C93F328E18FAE81300288E26 /* DSASettingsViewController.h */,
-				C93F328F18FAE81300288E26 /* DSASettingsViewController.m */,
+				C93F329418FAEDBA00288E26 /* DSASettingsViewController.h */,
+				C93F329518FAEDBA00288E26 /* DSASettingsViewController.m */,
+				C93F329118FAED8900288E26 /* DSANotificationController.h */,
+				C93F329218FAED8900288E26 /* DSANotificationController.m */,
 			);
 			name = Settings;
 			path = Timeline;
@@ -514,6 +525,11 @@
 				TargetAttributes = {
 					4CD476E118F9B09F00E14178 = {
 						DevelopmentTeam = WS7CC4HVGS;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					4CD476FC18F9B09F00E14178 = {
 						TestTargetID = 4CD476E118F9B09F00E14178;
@@ -546,11 +562,13 @@
 				4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */,
 				C93F328C18FAE2A100288E26 /* ContinueChevron.png in Resources */,
 				C93F328918FAE09D00288E26 /* Rover.png in Resources */,
+				C93F329918FAF35B00288E26 /* icon_alert_active.png in Resources */,
 				C93F328718FAE09D00288E26 /* Manned.png in Resources */,
 				C93F328618FAE09D00288E26 /* Calendar.png in Resources */,
 				C93F327718FAC06600288E26 /* ISS.png in Resources */,
 				C93F328818FAE09D00288E26 /* Probe.png in Resources */,
 				4CD476F018F9B09F00E14178 /* InfoPlist.strings in Resources */,
+				C93F329A18FAF35B00288E26 /* icon_alert_inactive.png in Resources */,
 				C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */,
 				4CD476F818F9B09F00E14178 /* Images.xcassets in Resources */,
 				4CB014FF18FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */,
@@ -577,8 +595,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93F327A18FAC0E400288E26 /* DSANextLaunchCell.m in Sources */,
+				C93F329318FAED8900288E26 /* DSANotificationController.m in Sources */,
 				4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */,
-				C93F329018FAE81300288E26 /* DSASettingsViewController.m in Sources */,
 				C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */,
 				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
 				4C61AD9A18F9EF61009E585F /* DSATimelineViewCell.m in Sources */,
@@ -595,6 +613,7 @@
 				4C62443E18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m in Sources */,
 				4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */,
 				C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */,
+				C93F329618FAEDBA00288E26 /* DSASettingsViewController.m in Sources */,
 				C985559918F9D79800D7D1C7 /* NSCachedURLResponse+LeakFix.m in Sources */,
 				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */,
