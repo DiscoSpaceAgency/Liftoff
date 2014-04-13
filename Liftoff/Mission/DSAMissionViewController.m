@@ -150,7 +150,7 @@
             cell.name.text = @"Started experiments";
             cell.description.text = @"05.12.2009";
         } else if (indexPath.row == 2) {
-            cell.name.text = @"Kepler entered safe mode";
+            cell.name.text = @"Entered safe mode";
             cell.description.text = @"06.15.2009";
         }
         

@@ -70,7 +70,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DLb-IX-37x" kind="custom" id="oDe-0R-r6d"/>
+                                    <segue destination="DLb-IX-37x" kind="custom" identifier="showEvents" id="oDe-0R-r6d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Bc-jq-Tre">
@@ -142,10 +142,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3rk-gf-phP">
-                                <rect key="frame" x="5" y="19" width="80" height="44"/>
+                                <rect key="frame" x="20" y="29" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
-                                <state key="normal" title="Settings">
+                                <state key="normal" image="icon_settings.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -648,7 +647,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SP1-gv-Uyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283" y="732"/>
+            <point key="canvasLocation" x="129" y="732"/>
         </scene>
     </scenes>
     <resources>
@@ -657,7 +656,7 @@
         <image name="ContinueChevron.png" width="90" height="51"/>
         <image name="ISS.png" width="1000" height="1600"/>
         <image name="icon_alert_active.png" width="44" height="44"/>
-        <image name="icon_settings.png" width="58" height="57"/>
+        <image name="icon_settings.png" width="44" height="44"/>
     </resources>
     <color key="tintColor" red="0.36862745881080627" green="0.14117647707462311" blue="0.14509804546833038" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -667,7 +666,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="xpm-Xm-1Oc"/>
-        <segue reference="z7l-gs-bZz"/>
-        <segue reference="QjK-Pk-FK4"/>
+        <segue reference="oDe-0R-r6d"/>
+        <segue reference="l1c-KW-aEd"/>
     </inferredMetricsTieBreakers>
 </document>

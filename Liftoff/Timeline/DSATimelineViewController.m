@@ -46,6 +46,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(segueForTimelineNotification:) name:@"TimelineSelect" object:nil];
 
     _selectedTimelineStripRect = CGRectZero;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showEvent) name:@"showEvents" object:nil];
+}
+- (void)showEvent {
+    [self performSegueWithIdentifier:@"showEvents" sender:self];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
