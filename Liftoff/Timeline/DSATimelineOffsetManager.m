@@ -77,6 +77,7 @@
 
 - (void)scrub:(NSNotification *)notification
 {
+    _offset = [notification.userInfo[@"translate"] integerValue];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelinePan" object:self userInfo:notification.userInfo];
 }
 
