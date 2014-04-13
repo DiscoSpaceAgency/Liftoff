@@ -10,4 +10,10 @@
 
 @interface DSANextLaunchCell : UITableViewCell
 
+@property (nonatomic, strong) IBOutlet UILabel *launchName;
+@property (nonatomic, strong) IBOutlet UILabel *launchingIn;
+@property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+@property (nonatomic, strong) IBOutlet UIButton *watchLive;
+@property (nonatomic, strong) NSDate *date;
+
 @end

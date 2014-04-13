@@ -7,6 +7,7 @@
 //
 
 #import "DSANextLaunchCell.h"
+#import "DSADateConverter.h"
 
 @implementation DSANextLaunchCell
 
@@ -14,9 +15,18 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.watchLive.layer.cornerRadius = 10;
+        self.watchLive.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.watchLive.layer.borderWidth = 1;
+        self.watchLive.layer.masksToBounds = YES;
+        
+        [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
     }
     return self;
+}
+
+- (void)updateCountdown {
+    self.timeLabel.text = [[DSADateConverter sharedInstance] timeUntilDate:self.date];
 }
 
 - (void)awakeFromNib

@@ -38,6 +38,10 @@
 		4CD4770118F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
 		4CD4770918F9B09F00E14178 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CD4770718F9B09F00E14178 /* InfoPlist.strings */; };
 		4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4770A18F9B09F00E14178 /* LiftoffTests.m */; };
+		C93F327718FAC06600288E26 /* ISS.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F327618FAC06500288E26 /* ISS.png */; };
+		C93F327A18FAC0E400288E26 /* DSANextLaunchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F327918FAC0E400288E26 /* DSANextLaunchCell.m */; };
+		C93F327D18FAC0F800288E26 /* DSALaunchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F327C18FAC0F800288E26 /* DSALaunchCell.m */; };
+		C93F328018FACBC000288E26 /* DSADateConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = C93F327F18FACBC000288E26 /* DSADateConverter.m */; };
 		C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C953A5C618FA4F5400131EA4 /* DSALaunch.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
@@ -108,6 +112,13 @@
 		4CD4770618F9B09F00E14178 /* LiftoffTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiftoffTests-Info.plist"; sourceTree = "<group>"; };
 		4CD4770818F9B09F00E14178 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CD4770A18F9B09F00E14178 /* LiftoffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftoffTests.m; sourceTree = "<group>"; };
+		C93F327618FAC06500288E26 /* ISS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ISS.png; sourceTree = "<group>"; };
+		C93F327818FAC0E400288E26 /* DSANextLaunchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSANextLaunchCell.h; path = Liftoff/Launches/DSANextLaunchCell.h; sourceTree = SOURCE_ROOT; };
+		C93F327918FAC0E400288E26 /* DSANextLaunchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSANextLaunchCell.m; path = Liftoff/Launches/DSANextLaunchCell.m; sourceTree = SOURCE_ROOT; };
+		C93F327B18FAC0F800288E26 /* DSALaunchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSALaunchCell.h; sourceTree = "<group>"; };
+		C93F327C18FAC0F800288E26 /* DSALaunchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunchCell.m; sourceTree = "<group>"; };
+		C93F327E18FACBC000288E26 /* DSADateConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSADateConverter.h; sourceTree = "<group>"; };
+		C93F327F18FACBC000288E26 /* DSADateConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSADateConverter.m; sourceTree = "<group>"; };
 		C953A5C518FA4F5400131EA4 /* DSALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSALaunch.h; sourceTree = "<group>"; };
 		C953A5C618FA4F5400131EA4 /* DSALaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunch.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -268,6 +279,7 @@
 		4CB014F218FA346400E4B82F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C93F327618FAC06500288E26 /* ISS.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -397,6 +409,12 @@
 			children = (
 				C98555B918FA45BE00D7D1C7 /* DSALaunchViewController.h */,
 				C98555BA18FA45BE00D7D1C7 /* DSALaunchViewController.m */,
+				C93F327818FAC0E400288E26 /* DSANextLaunchCell.h */,
+				C93F327918FAC0E400288E26 /* DSANextLaunchCell.m */,
+				C93F327B18FAC0F800288E26 /* DSALaunchCell.h */,
+				C93F327C18FAC0F800288E26 /* DSALaunchCell.m */,
+				C93F327E18FACBC000288E26 /* DSADateConverter.h */,
+				C93F327F18FACBC000288E26 /* DSADateConverter.m */,
 			);
 			name = Launches;
 			path = Mission;
@@ -482,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */,
+				C93F327718FAC06600288E26 /* ISS.png in Resources */,
 				4CD476F018F9B09F00E14178 /* InfoPlist.strings in Resources */,
 				C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */,
 				4CD476F818F9B09F00E14178 /* Images.xcassets in Resources */,
@@ -507,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93F327A18FAC0E400288E26 /* DSANextLaunchCell.m in Sources */,
 				4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */,
 				C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */,
 				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
@@ -529,12 +549,14 @@
 				4CA79CD518FA54250008966B /* DSAScrubberView.m in Sources */,
 				C985557D18F9D62F00D7D1C7 /* DSADataGrabber.m in Sources */,
 				C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */,
+				C93F328018FACBC000288E26 /* DSADateConverter.m in Sources */,
 				C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */,
 				C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */,
 				C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */,
 				C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */,
 				4C61AD9918F9EF61009E585F /* DSATimelineDataSource.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
+				C93F327D18FAC0F800288E26 /* DSALaunchCell.m in Sources */,
 				C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */,
 				4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */,
 			);

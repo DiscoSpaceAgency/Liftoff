@@ -10,4 +10,9 @@
 
 @interface DSALaunchCell : UITableViewCell
 
+@property (nonatomic, strong) IBOutlet UILabel *launchName;
+@property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+@property (nonatomic, strong) IBOutlet UILabel *timeDetails;
+@property (nonatomic, strong) IBOutlet UILabel *dateLabel;
+
 @end

@@ -68,15 +68,14 @@
     NSMutableArray *launches = [[NSMutableArray alloc] init];
     
     [[table componentsSeparatedByString:@"</tr>"] enumerateObjectsUsingBlock:^(NSString *row, NSUInteger idx, BOOL *stop) {
-        DSALaunch *launch = [[DSALaunch alloc] init];
-        __block NSString *year;
-        __block NSString *date;
-        __block NSString *time = @"00:00:00 UTC";
         
         if ([row rangeOfString:@"x:num>20"].location != NSNotFound) {
+            DSALaunch *launch = [[DSALaunch alloc] init];
+            __block NSString *year;
+            __block NSString *date;
+            __block NSString *time = @"00:00";
+            
             [[row componentsSeparatedByString:@"\n"] enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
-                //NSLog(@"Line %lu: %@", (unsigned long)idx, line);
-                
                 if (idx == 2) {
                     year = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
                 } else if (idx == 3) {
@@ -84,6 +83,8 @@
                 } else if (idx == 4) {
                     if ([line rangeOfString:@"UTC"].location != NSNotFound) {
                         time = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
+                        time = [time stringByReplacingOccurrencesOfString:@" UTC" withString:@""];
+                        time = [time substringToIndex:5];
                     }
                 } else if (idx == 6) {
                     NSString *vehicle = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
@@ -94,11 +95,33 @@
                 }
                 
             }];
+            
+            if (time.length > 0) {
+                NSString *dateString = [NSString stringWithFormat:@"%@ %@ %@", time, date, year];
+                
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+                [dateFormatter setTimeZone:timeZone];
+                [dateFormatter setDateFormat:@"HH:mm MM dd yyyy"];
+                NSDate *myDate = [dateFormatter dateFromString: dateString];
+                
+                launch.date = myDate;
+            } else {
+                NSString *dateString = [NSString stringWithFormat:@"%@ %@", date, year];
+                
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+                [dateFormatter setTimeZone:timeZone];
+                [dateFormatter setDateFormat:@"MM dd yyyy"];
+                NSDate *myDate = [dateFormatter dateFromString: dateString];
+                
+                launch.date = myDate;
+            }
+            
+            if (launch.date && [launch.date timeIntervalSince1970] > [[NSDate date] timeIntervalSince1970]) {
+                [launches addObject:launch];
+            }
         }
-        
-        launch.date = [NSDate date]; // fix by determining date from above variables
-        
-        [launches addObject:launch];
     }];
     
     return launches;

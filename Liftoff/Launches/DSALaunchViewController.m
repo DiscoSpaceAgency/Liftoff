@@ -7,6 +7,11 @@
 //
 
 #import "DSALaunchViewController.h"
+#import "DSADateConverter.h"
+#import "DSANextLaunchCell.h"
+#import "DSALaunchCell.h"
+#import "DSADataStore.h"
+#import "DSALaunch.h"
 
 @interface DSALaunchViewController ()
 
@@ -23,10 +28,56 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return 250;
+    } else {
+        return 80;
+    }
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [DSADataStore sharedInstance].launches.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        DSANextLaunchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nextEventCell"];
+        
+        DSALaunch *launch = [[DSADataStore sharedInstance].launches objectAtIndex:indexPath.row];
+        
+        cell.launchName.text = launch.payload;
+        cell.date = launch.date;
+        cell.timeLabel.text = [[DSADateConverter sharedInstance] timeUntilDate:launch.date];
+        
+        return cell;
+    } else {
+        DSALaunchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"launchCell"];
+        
+        DSALaunch *launch = [[DSADataStore sharedInstance].launches objectAtIndex:indexPath.row];
+        
+        cell.launchName.text = launch.payload;
+        
+        cell.dateLabel.text = [[DSADateConverter sharedInstance] dateStringFromDate:launch.date];
+        cell.timeDetails.text = [[DSADateConverter sharedInstance] timeStringFromDate:launch.date];
+        
+        return cell;
+    }
+}
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,16 +85,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

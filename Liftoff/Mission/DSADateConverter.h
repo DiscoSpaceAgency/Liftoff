@@ -10,4 +10,10 @@
 
 @interface DSADateConverter : NSObject
 
++ (instancetype)sharedInstance;
+
+- (NSString *)timeUntilDate:(NSDate *)date;
+- (NSString *)dateStringFromDate:(NSDate *)date;
+- (NSString *)timeStringFromDate:(NSDate *)date;
+
 @end

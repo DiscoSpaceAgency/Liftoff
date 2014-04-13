@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DSALaunchViewController : UIViewController {
+@interface DSALaunchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    IBOutlet UIButton *settingsButton;
+    IBOutlet UIButton *timelineButton;
     
+    IBOutlet UITableView *launchesTable;
 }
 
 @end
