@@ -36,6 +36,12 @@
     [_agencyLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:9.0]];
 }
 
+- (void)didMoveToWindow
+{
+    CGFloat y = [self.superview convertPoint:self.frame.origin toView:nil].y/self.window.frame.size.height;
+    [_timelineStrip setBackgroundColor:[UIColor colorWithWhite:(1.0-y/3) alpha:1.0]];
+}
+
 - (void)setMission:(DSAMission *)mission
 {
     _mission = mission;
@@ -48,6 +54,7 @@
         [_agencyLabel setFrame:CGRectMake(labelMinX, 35, self.frame.size.width - 40, 20)];
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pan:) name:@"TimelinePan" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scroll:) name:@"TimelineScroll" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetOffset:) name:@"TimelineResetOffset" object:nil];
 }
 
@@ -60,6 +67,12 @@
         [_missionNameLabel setFrame:CGRectMake(labelX, 10, self.frame.size.width - 40, 30)];
         [_agencyLabel setFrame:CGRectMake(labelX, 35, self.frame.size.width - 40, 20)];
     }];
+}
+
+- (void)scroll:(NSNotification *)notification
+{
+    CGFloat y = [self.superview convertPoint:self.frame.origin toView:nil].y/self.window.frame.size.height;
+    [_timelineStrip setBackgroundColor:[UIColor colorWithWhite:(1.0-y/3) alpha:1.0]];
 }
 
 - (void)resetOffset:(NSNotification *)notification

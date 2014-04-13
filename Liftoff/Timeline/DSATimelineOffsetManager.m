@@ -86,6 +86,11 @@
     _isTableScrolling = YES;
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelineScroll" object:self userInfo:nil];
+}
+
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     _isTableScrolling = decelerate;
