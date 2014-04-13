@@ -11,5 +11,6 @@
 + (instancetype)sharedInstance;
 
 - (NSArray *)getAllMissions;
+- (NSArray *)getAllLaunches;
 
 @end

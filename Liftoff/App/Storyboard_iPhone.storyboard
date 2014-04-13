@@ -82,6 +82,36 @@
             </objects>
             <point key="canvasLocation" x="671" y="42"/>
         </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="ckP-50-aJ5">
+            <objects>
+                <viewController storyboardIdentifier="DSALaunchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DLb-IX-37x" customClass="DSALaunchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xow-Td-CoA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1ph-JW-mfK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3gj-bu-s3D">
+                                <rect key="frame" x="0.0" y="181" width="320" height="387"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="iIX-Ky-cR2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WiV-5Y-HeC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfB-5P-SvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="732"/>
+        </scene>
         <!--Mission View Controller-->
         <scene sceneID="NpM-Vr-eRq">
             <objects>
@@ -329,6 +359,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzq-JJ-kw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="283" y="42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cDt-fa-6ur">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pvZ-1a-kXf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hEK-DK-RnS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DLb-IX-37x" kind="relationship" relationship="rootViewController" id="c6w-v6-rWT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SP1-gv-Uyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="283" y="732"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

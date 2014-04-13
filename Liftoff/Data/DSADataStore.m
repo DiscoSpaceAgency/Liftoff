@@ -10,6 +10,7 @@
 #import "DSADataGrabber.h"
 #import "DSAMission.h"
 #import "DSAEvent.h"
+#import "DSALaunch.h"
 
 @implementation DSADataStore
 
@@ -46,6 +47,12 @@
     }];
     _events = [_events sortedArrayUsingComparator:^NSComparisonResult(DSAEvent *event1, DSAEvent *event2) {
         return [event1.date compare:event2.date];
+    }];
+    
+    _launches = [[DSADataGrabber sharedInstance] getAllLaunches];
+    
+    _launches = [_launches sortedArrayUsingComparator:^NSComparisonResult(DSALaunch *launch1, DSALaunch *launch2) {
+        return [launch1.date compare:launch2.date];
     }];
 }
 

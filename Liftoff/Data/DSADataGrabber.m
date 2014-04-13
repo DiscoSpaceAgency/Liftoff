@@ -11,6 +11,7 @@
 #import "DSADataGrabber.h"
 #import "DSAMission.h"
 #import "DSAEvent.h"
+#import "DSALaunch.h"
 
 @implementation DSADataGrabber
 
@@ -57,6 +58,83 @@
         // Problem...
         return @[];
     }
+}
+
+- (NSArray *)getAllLaunches
+{
+    NSString *rawData = [self stringFromURL:@"http://www.spaceflight101.com/launch-calendar-april-2014.html"];
+    NSString *table = [self getStringWithStart:@"<td class=xl2627174>NOTES</td>" endString:@"<!----------------------------->" fromData:rawData];
+    
+    NSMutableArray *launches = [[NSMutableArray alloc] init];
+    
+    [[table componentsSeparatedByString:@"</tr>"] enumerateObjectsUsingBlock:^(NSString *row, NSUInteger idx, BOOL *stop) {
+        DSALaunch *launch = [[DSALaunch alloc] init];
+        __block NSString *year;
+        __block NSString *date;
+        __block NSString *time = @"00:00:00 UTC";
+        
+        if ([row rangeOfString:@"x:num>20"].location != NSNotFound) {
+            [[row componentsSeparatedByString:@"\n"] enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
+                //NSLog(@"Line %lu: %@", (unsigned long)idx, line);
+                
+                if (idx == 2) {
+                    year = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
+                } else if (idx == 3) {
+                    date = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
+                } else if (idx == 4) {
+                    if ([line rangeOfString:@"UTC"].location != NSNotFound) {
+                        time = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
+                    }
+                } else if (idx == 6) {
+                    NSString *vehicle = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
+                    launch.vehicle = vehicle;
+                } else if (idx == 7) {
+                    NSString *payload = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
+                    launch.payload = payload;
+                }
+                
+            }];
+        }
+        
+        launch.date = [NSDate date]; // fix by determining date from above variables
+        
+        [launches addObject:launch];
+    }];
+    
+    return launches;
+}
+
+- (NSString *)stringFromURL:(NSString *)url {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSError *errorDownload = nil;
+    NSURLResponse *response = nil;
+    
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&errorDownload];
+    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    return responseString;
+}
+
+
+- (NSString *)getStringWithStart:(NSString *)startString endString:(NSString *)endString fromData:(NSString *)data {
+    NSScanner *theScanner;
+    NSString *text = nil;
+    
+    theScanner = [NSScanner scannerWithString: data];
+    text = nil;
+    
+    [theScanner scanUpToString:startString intoString: NULL];
+    if ([theScanner isAtEnd] == NO) {
+        NSInteger newLoc = [theScanner scanLocation];
+        [theScanner setScanLocation: newLoc];
+        [theScanner scanUpToString:endString intoString: &text];
+    }
+    if (text && ![text isEqualToString:@""]) {
+        text = [NSString stringWithFormat:@"%@", text];
+        text = [text stringByReplacingOccurrencesOfString:startString withString:@""];
+        return text;
+    }
+    return nil;
 }
 
 @end
