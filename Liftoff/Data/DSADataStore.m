@@ -59,6 +59,8 @@
     NSDate *maxDate = (NSDate *)[_missions valueForKeyPath:@"@max.startDate"];
     _minYear = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:minDate].year;
     _maxYear = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSYearCalendarUnit fromDate:maxDate].year;
+    _minYear = 1969;
+    _maxYear = 2025;
 }
 
 - (void)fetchLaunches {
