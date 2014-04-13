@@ -22,11 +22,11 @@
 		4C62443F18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62443D18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m */; };
 		4C62444218FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */; };
 		4C62444318FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */; };
-		4C62444518FAE45800D1D582 /* icon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C62444418FAE45800D1D582 /* icon_settings.png */; };
 		4C62444818FAE7CC00D1D582 /* DSATimelineEventsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */; };
 		4C62444918FAE7CC00D1D582 /* DSATimelineEventsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */; };
 		4C62444C18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */; };
 		4C62444D18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */; };
+		4C62445218FB006F00D1D582 /* icon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C62445118FB006F00D1D582 /* icon_settings.png */; };
 		4CA79CD518FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
 		4CA79CD618FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
 		4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD818FA62F80008966B /* DSAScrubberManager.m */; };
@@ -113,11 +113,11 @@
 		4C62443D18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSATimelineMissionAnimator.m; path = ../Timeline/DSATimelineMissionAnimator.m; sourceTree = "<group>"; };
 		4C62444018FABBE200D1D582 /* DSANavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSANavigationControllerDelegate.h; sourceTree = "<group>"; };
 		4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSANavigationControllerDelegate.m; sourceTree = "<group>"; };
-		4C62444418FAE45800D1D582 /* icon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_settings.png; sourceTree = "<group>"; };
 		4C62444618FAE7CC00D1D582 /* DSATimelineEventsAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineEventsAnimator.h; sourceTree = "<group>"; };
 		4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineEventsAnimator.m; sourceTree = "<group>"; };
 		4C62444A18FAEBC100D1D582 /* DSATimelineSettingsAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineSettingsAnimator.h; sourceTree = "<group>"; };
 		4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineSettingsAnimator.m; sourceTree = "<group>"; };
+		4C62445118FB006F00D1D582 /* icon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_settings.png; sourceTree = "<group>"; };
 		4CA79CD318FA54250008966B /* DSAScrubberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberView.h; sourceTree = "<group>"; };
 		4CA79CD418FA54250008966B /* DSAScrubberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAScrubberView.m; sourceTree = "<group>"; };
 		4CA79CD718FA62F80008966B /* DSAScrubberManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberManager.h; sourceTree = "<group>"; };
@@ -334,7 +334,7 @@
 				C93F328418FAE09D00288E26 /* Rover.png */,
 				C93F328518FAE09D00288E26 /* Satellite.png */,
 				C93F327618FAC06500288E26 /* ISS.png */,
-				4C62444418FAE45800D1D582 /* icon_settings.png */,
+				4C62445118FB006F00D1D582 /* icon_settings.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -572,6 +572,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C62445218FB006F00D1D582 /* icon_settings.png in Resources */,
 				4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */,
 				C93F328C18FAE2A100288E26 /* ContinueChevron.png in Resources */,
 				C93F328918FAE09D00288E26 /* Rover.png in Resources */,
