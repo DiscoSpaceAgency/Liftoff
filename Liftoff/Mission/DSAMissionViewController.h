@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EGOImageView.h"
+#import "UIView+FLKAutoLayout.h"
 
 #import "DSAAstronautCell.h"
+#import "DSAEventCell.h"
 #import "DSAMission.h"
 #import "DSAEvent.h"
 
@@ -17,7 +18,7 @@
     IBOutlet UIScrollView *content;
     
     IBOutlet EGOImageView *missionImage;
-    IBOutlet UIImageView *topBarImage;
+    IBOutlet UIImageView *faderImage;
     
     IBOutlet UIButton *backButton;
     
@@ -28,11 +29,22 @@
     IBOutlet UIButton *downButton;
     IBOutlet UIImageView *downShadow;
     
-    IBOutlet UITableView *astronautTable;
+    IBOutlet UILabel *titleLabel;
+    IBOutlet UIImageView *contentDivider;
+    
+    IBOutlet UILabel *missionDescription;
+    
+    IBOutlet UIImageView *dateImage;
+    IBOutlet UIImageView *typeImage;
+    IBOutlet UILabel *dateTitle;
+    IBOutlet UILabel *typeTitle;
+    IBOutlet UILabel *dateData;
+    IBOutlet UILabel *typeData;
     
     IBOutlet UILabel *eventTitle;
     IBOutlet UIImageView *eventDivider;
     IBOutlet UITableView *eventTable;
+    IBOutlet UIImageView *eventTimeline;
 }
 @property (nonatomic, strong) DSAMission *mission;
 

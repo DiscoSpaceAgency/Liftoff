@@ -41,6 +41,9 @@
 		C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A018F9D8C700D7D1C7 /* DSAAstronautCell.m */; };
 		C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */; };
 		C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */; };
+		C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */; };
+		C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */; };
+		C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,12 @@
 		C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAEventCell.m; sourceTree = "<group>"; };
 		C98555A518F9EAC800D7D1C7 /* DSAShadowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAShadowLabel.h; sourceTree = "<group>"; };
 		C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAShadowLabel.m; sourceTree = "<group>"; };
+		C98555AB18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLKAutoLayoutPredicateList.h; path = Dependencies/FLKAutoLayout/FLKAutoLayoutPredicateList.h; sourceTree = "<group>"; };
+		C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLKAutoLayoutPredicateList.m; path = Dependencies/FLKAutoLayout/FLKAutoLayoutPredicateList.m; sourceTree = "<group>"; };
+		C98555AD18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayout.h"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayout.h"; sourceTree = "<group>"; };
+		C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayout.m"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayout.m"; sourceTree = "<group>"; };
+		C98555AF18F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutPredicate.h"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayoutPredicate.h"; sourceTree = "<group>"; };
+		C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayoutPredicate.m"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,9 +290,23 @@
 		C985559E18F9D86800D7D1C7 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				C98555B418F9FC2C00D7D1C7 /* AutoLayout */,
 				C985557F18F9D74100D7D1C7 /* EGOImageLoader */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		C98555B418F9FC2C00D7D1C7 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C98555AB18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.h */,
+				C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */,
+				C98555AD18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.h */,
+				C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */,
+				C98555AF18F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.h */,
+				C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */,
+			);
+			name = AutoLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,10 +407,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */,
 				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
 				C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */,
 				C985559818F9D79800D7D1C7 /* EGOImageView.m in Sources */,
 				C985559618F9D79800D7D1C7 /* EGOImageLoadConnection.m in Sources */,
+				C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
 				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
 				C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */,
 				C985559518F9D79800D7D1C7 /* EGOImageButton.m in Sources */,
@@ -396,6 +421,7 @@
 				C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */,
 				4CD476F218F9B09F00E14178 /* main.m in Sources */,
 				C985557D18F9D62F00D7D1C7 /* DSADataGrabber.m in Sources */,
+				C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */,
 				C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */,
 				C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */,
 				C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */,

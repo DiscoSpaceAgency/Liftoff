@@ -14,7 +14,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.eventIcon.layer.cornerRadius = self.eventIcon.frame.size.width/2;
     }
     return self;
 }
