@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 Disco Space Agency. All rights reserved.
 //
 
-@interface DSATimelineViewController : UIViewController
+#import "DSASettingsViewController.h"
+
+@interface DSATimelineViewController : UIViewController <DSASettingsViewControllerDelegate>
 
 @property (readonly, nonatomic) CGRect selectedTimelineStripRect;
 @property (readonly, nonatomic) UIButton *settingsButton;

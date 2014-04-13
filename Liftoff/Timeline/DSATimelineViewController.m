@@ -72,6 +72,10 @@
         DSAMissionViewController *missionViewController = [segue destinationViewController];
         [missionViewController setMission:sender];
     }
+    else if ([segue.identifier isEqualToString:@"showSettings"]) {
+        DSASettingsViewController *settingsViewController = [segue destinationViewController];
+        settingsViewController.segueIdentifier = @"showTimeline";
+    }
 }
 
 @end

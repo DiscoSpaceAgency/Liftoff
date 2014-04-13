@@ -79,6 +79,9 @@
                                 <state key="normal" image="icon_settings.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zRa-eh-myT" kind="push" identifier="showSettings" id="l1c-KW-aEd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zEG-3C-FL5">
                                 <rect key="frame" x="84" y="26" width="152" height="38"/>
@@ -145,6 +148,9 @@
                                     <color key="titleColor" red="0.56470588239999997" green="0.090196078430000007" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zRa-eh-myT" kind="custom" identifier="showSettings" id="QjK-Pk-FK4"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" sectionHeaderHeight="22" sectionFooterHeight="22" id="3gj-bu-s3D">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
@@ -283,6 +289,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="done:" destination="zRa-eh-myT" eventType="touchUpInside" id="1CV-4c-BML"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALERT ME WHEN MISSION EVENTS ARE ABOUT TO HAPPEN!" lineBreakMode="tailTruncation" numberOfLines="999" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lwz-Ql-HTk">
                                 <rect key="frame" x="20" y="83" width="280" height="60"/>
@@ -299,7 +308,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CFY-3k-5Qu">
-                                <rect key="frame" x="26" y="146" width="200" height="44"/>
+                                <rect key="frame" x="26" y="146" width="274" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -325,6 +334,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.15686274510000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9vf-sV-rYi"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="description" destination="Lwz-Ql-HTk" id="lBJ-Mw-xXU"/>
@@ -332,6 +342,8 @@
                         <outlet property="launchesAlert" destination="48S-aQ-Te0" id="pu1-j3-6wF"/>
                         <outlet property="launchesLabel" destination="CFY-3k-5Qu" id="NeB-qK-Inn"/>
                         <outlet property="titleLabel" destination="cNK-12-NtH" id="9Zy-Ms-vQs"/>
+                        <segue destination="DLb-IX-37x" kind="custom" identifier="showEvents" id="z7l-gs-bZz"/>
+                        <segue destination="eHN-Fn-oPG" kind="custom" identifier="showTimeline" id="Ubh-3d-DeP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnO-Zi-1vI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -623,7 +635,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xpm-Xm-1Oc"/>
-        <segue reference="oDe-0R-r6d"/>
+        <segue reference="Ubh-3d-DeP"/>
+        <segue reference="QjK-Pk-FK4"/>
+        <segue reference="z7l-gs-bZz"/>
     </inferredMetricsTieBreakers>
 </document>

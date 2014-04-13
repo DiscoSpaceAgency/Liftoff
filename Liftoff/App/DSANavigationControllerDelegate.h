@@ -6,6 +6,6 @@
 //  Copyright (c) 2014 Disco Space Agency. All rights reserved.
 //
 
-@interface DSANavigationControllerDelegate : NSObject  <UINavigationControllerDelegate>
+@interface DSANavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
 
 @end

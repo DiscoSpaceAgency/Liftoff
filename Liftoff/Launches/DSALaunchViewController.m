@@ -12,6 +12,7 @@
 #import "DSALaunchCell.h"
 #import "DSADataStore.h"
 #import "DSALaunch.h"
+#import "DSASettingsViewController.h"
 
 @interface DSALaunchViewController ()
 
@@ -84,6 +85,14 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LaunchScroll" object:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showSettings"]) {
+        DSASettingsViewController *settingsViewController = [segue destinationViewController];
+        settingsViewController.segueIdentifier = @"showEvents";
+    }
 }
 
 - (void)didReceiveMemoryWarning
