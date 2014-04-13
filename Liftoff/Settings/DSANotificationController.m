@@ -41,7 +41,7 @@
         notifyAlarm.fireDate = alertTime;
         notifyAlarm.timeZone = [NSTimeZone defaultTimeZone];
         notifyAlarm.repeatInterval = 0;
-        notifyAlarm.alertBody = @"Launching in 5";
+        notifyAlarm.alertBody = @"NASA Space Apps Challenge launching now!";
         [[UIApplication sharedApplication] scheduleLocalNotification:notifyAlarm];
     }
 }

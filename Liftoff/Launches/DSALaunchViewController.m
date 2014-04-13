@@ -35,8 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-    [self setNeedsStatusBarAppearanceUpdate];
+    timelineButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0];
+    settingsButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0];
+    titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:24.0];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

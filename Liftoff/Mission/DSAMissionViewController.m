@@ -100,7 +100,7 @@
         missionDescription.frame = CGRectMake(missionDescription.frame.origin.x, missionDescription.frame.origin.y, missionDescription.frame.size.width, frame.size.height);
         
         NSInteger offset = missionDescription.frame.size.height-160;
-        content.contentSize = CGSizeMake(self.view.frame.size.width, 1500+offset);
+        content.contentSize = CGSizeMake(self.view.frame.size.width, 1400+offset);
         NSLog(@"%ld", (long)offset);
         
         UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, content.contentSize.height)];
@@ -145,13 +145,13 @@
         
         if (indexPath.row == 0) {
             cell.name.text = @"Launch";
-            cell.description.text = @"Launch";
+            cell.description.text = @"03.07.2009";
         } else if (indexPath.row == 1) {
-            cell.name.text = @"Arrival";
-            cell.description.text = @"Launch";
+            cell.name.text = @"Started experiments";
+            cell.description.text = @"05.12.2009";
         } else if (indexPath.row == 2) {
-            cell.name.text = @"Death";
-            cell.description.text = @"Launch";
+            cell.name.text = @"Kepler entered safe mode";
+            cell.description.text = @"06.15.2009";
         }
         
         return cell;

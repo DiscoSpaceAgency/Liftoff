@@ -15,6 +15,7 @@
 {
     [DSADataStore sharedInstance];
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    
     return YES;
 }
 

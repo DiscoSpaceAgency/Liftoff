@@ -12,6 +12,8 @@
     IBOutlet UIButton *settingsButton;
     IBOutlet UIButton *timelineButton;
     
+    IBOutlet UILabel *titleLabel;
+    
     IBOutlet UITableView *launchesTable;
 }
 

@@ -15,14 +15,22 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.watchLive.layer.cornerRadius = 10;
-        self.watchLive.layer.borderColor = [UIColor whiteColor].CGColor;
-        self.watchLive.layer.borderWidth = 1;
-        self.watchLive.layer.masksToBounds = YES;
     }
     return self;
 }
 - (void)awakeFromNib {
+    self.watchLive.layer.cornerRadius = 10;
+    self.watchLive.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.watchLive.layer.borderWidth = 1;
+    self.watchLive.layer.masksToBounds = YES;
+    
+    [_launchName setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:20.0]];
+    [_launchingIn setFont:[UIFont fontWithName:@"Novecentosanswide-Light" size:18.0]];
+    
+    [_timeLabel setFont:[UIFont fontWithName:@"Novecentosanswide-Light" size:60.0]];
+    
+    [_watchLive.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:16.0]];
+    
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
     [runloop addTimer:timer forMode:NSRunLoopCommonModes];
