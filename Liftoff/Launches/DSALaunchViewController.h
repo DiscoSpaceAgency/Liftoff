@@ -15,4 +15,7 @@
     IBOutlet UITableView *launchesTable;
 }
 
+@property (strong, nonatomic) IBOutlet UIButton *settingsButton;
+@property (strong, nonatomic) IBOutlet UIButton *timelineButton;
+
 @end

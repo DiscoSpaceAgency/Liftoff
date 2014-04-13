@@ -9,5 +9,7 @@
 @interface DSATimelineViewController : UIViewController
 
 @property (readonly, nonatomic) CGRect selectedTimelineStripRect;
+@property (readonly, nonatomic) UIButton *settingsButton;
+@property (readonly, nonatomic) UIButton *eventsButton;
 
 @end

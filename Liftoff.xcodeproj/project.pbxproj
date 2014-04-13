@@ -23,6 +23,10 @@
 		4C62444218FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */; };
 		4C62444318FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */; };
 		4C62444518FAE45800D1D582 /* icon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C62444418FAE45800D1D582 /* icon_settings.png */; };
+		4C62444818FAE7CC00D1D582 /* DSATimelineEventsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */; };
+		4C62444918FAE7CC00D1D582 /* DSATimelineEventsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */; };
+		4C62444C18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */; };
+		4C62444D18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */; };
 		4CA79CD518FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
 		4CA79CD618FA54250008966B /* DSAScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD418FA54250008966B /* DSAScrubberView.m */; };
 		4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA79CD818FA62F80008966B /* DSAScrubberManager.m */; };
@@ -100,6 +104,10 @@
 		4C62444018FABBE200D1D582 /* DSANavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSANavigationControllerDelegate.h; sourceTree = "<group>"; };
 		4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSANavigationControllerDelegate.m; sourceTree = "<group>"; };
 		4C62444418FAE45800D1D582 /* icon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_settings.png; sourceTree = "<group>"; };
+		4C62444618FAE7CC00D1D582 /* DSATimelineEventsAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineEventsAnimator.h; sourceTree = "<group>"; };
+		4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineEventsAnimator.m; sourceTree = "<group>"; };
+		4C62444A18FAEBC100D1D582 /* DSATimelineSettingsAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineSettingsAnimator.h; sourceTree = "<group>"; };
+		4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineSettingsAnimator.m; sourceTree = "<group>"; };
 		4CA79CD318FA54250008966B /* DSAScrubberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberView.h; sourceTree = "<group>"; };
 		4CA79CD418FA54250008966B /* DSAScrubberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAScrubberView.m; sourceTree = "<group>"; };
 		4CA79CD718FA62F80008966B /* DSAScrubberManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAScrubberManager.h; sourceTree = "<group>"; };
@@ -240,6 +248,10 @@
 				4C62444118FABBE200D1D582 /* DSANavigationControllerDelegate.m */,
 				4C62443C18FAAFBD00D1D582 /* DSATimelineMissionAnimator.h */,
 				4C62443D18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m */,
+				4C62444618FAE7CC00D1D582 /* DSATimelineEventsAnimator.h */,
+				4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */,
+				4C62444A18FAEBC100D1D582 /* DSATimelineSettingsAnimator.h */,
+				4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -564,6 +576,7 @@
 				4C12A10A18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */,
 				4CD476F218F9B09F00E14178 /* main.m in Sources */,
+				4C62444C18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m in Sources */,
 				4CA79CD518FA54250008966B /* DSAScrubberView.m in Sources */,
 				C985557D18F9D62F00D7D1C7 /* DSADataGrabber.m in Sources */,
 				C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */,
@@ -571,6 +584,7 @@
 				C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */,
 				C98555A118F9D8C700D7D1C7 /* DSAAstronautCell.m in Sources */,
 				C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */,
+				4C62444818FAE7CC00D1D582 /* DSATimelineEventsAnimator.m in Sources */,
 				C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */,
 				4C61AD9918F9EF61009E585F /* DSATimelineDataSource.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
@@ -584,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C62444D18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m in Sources */,
 				4CA79CDA18FA62F80008966B /* DSAScrubberManager.m in Sources */,
 				4C12A11318F9BB71002F9AEE /* DSAMission.m in Sources */,
 				4CA79CD618FA54250008966B /* DSAScrubberView.m in Sources */,
@@ -593,6 +608,7 @@
 				4C12A10B18F9B8C2002F9AEE /* DSATimelineViewController.m in Sources */,
 				4CD4770B18F9B09F00E14178 /* LiftoffTests.m in Sources */,
 				4C12A11718F9BB87002F9AEE /* DSAEvent.m in Sources */,
+				4C62444918FAE7CC00D1D582 /* DSATimelineEventsAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

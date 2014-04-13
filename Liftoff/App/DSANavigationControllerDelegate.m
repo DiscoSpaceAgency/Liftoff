@@ -8,11 +8,17 @@
 
 #import "DSANavigationControllerDelegate.h"
 #import "DSATimelineMissionAnimator.h"
+#import "DSAMissionViewController.h"
+#import "DSATimelineEventsAnimator.h"
+#import "DSALaunchViewController.h"
+#import "DSATimelineSettingsAnimator.h"
 
 @interface DSANavigationControllerDelegate ()
 
 @property (weak, nonatomic) IBOutlet UINavigationController *navigationController;
 @property (strong, nonatomic) DSATimelineMissionAnimator *timelineMissionAnimator;
+@property (strong, nonatomic) DSATimelineEventsAnimator *timelineEventsAnimator;
+@property (strong, nonatomic) DSATimelineSettingsAnimator *timelineSettingsAnimator;
 @property (strong, nonatomic) UIPercentDrivenInteractiveTransition* interactionController;
 
 @end
@@ -21,15 +27,25 @@
 
 - (void)awakeFromNib
 {
-    UIPanGestureRecognizer* navPanRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panNavigation:)];
-    [self.navigationController.view addGestureRecognizer:navPanRecognizer];
+//    UIPanGestureRecognizer* navPanRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panNavigation:)];
+//    [self.navigationController.view addGestureRecognizer:navPanRecognizer];
 
     self.timelineMissionAnimator = [[DSATimelineMissionAnimator alloc] init];
+    self.timelineEventsAnimator = [[DSATimelineEventsAnimator alloc] init];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
 {
-    return self.timelineMissionAnimator;
+    if ([fromVC isMemberOfClass:[DSAMissionViewController class]] || [toVC isMemberOfClass:[DSAMissionViewController class]]) {
+        return self.timelineMissionAnimator;
+    }
+    if ([fromVC isMemberOfClass:[DSALaunchViewController class]] || [toVC isMemberOfClass:[DSALaunchViewController class]]) {
+        return self.timelineEventsAnimator;
+    }
+    if ([fromVC isMemberOfClass:[DSALaunchViewController class]] || [toVC isMemberOfClass:[DSALaunchViewController class]]) {
+        return self.timelineSettingsAnimator;
+    }
+    return nil;
 }
 
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
