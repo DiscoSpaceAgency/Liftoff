@@ -53,7 +53,9 @@ float monthWidth(int month, int year)
     }
 
     const NSInteger minYear = [DSADataStore sharedInstance].minYear;
-    NSAssert(dateYear >= minYear, @"Given date (%i) is not in range of data (>= %i)",dateYear, minYear);
+    if (dateYear <= minYear) {
+        return -100;
+    }
 
     NSInteger position = 0;
     for (NSInteger year = minYear; year <= dateYear; year++) {
@@ -72,7 +74,11 @@ float monthWidth(int month, int year)
 
 + (NSInteger)maxPosition
 {
-    return [self position:[[DSADataStore sharedInstance].missions valueForKeyPath:@"@max.startDate"]];
+    NSDateComponents *maxDateComponents = [[NSDateComponents alloc] init];
+    maxDateComponents.year = 2027;
+    maxDateComponents.month = 1;
+    NSDate *maxDate = [self.calendar dateFromComponents:maxDateComponents];
+    return [self position:maxDate];
 }
 
 + (NSInteger)widthForStart:(NSDate *)startDate end:(NSDate *)endDate
@@ -85,7 +91,6 @@ float monthWidth(int month, int year)
     NSMutableArray *tickPositions = [NSMutableArray array];
     NSDateComponents *startDateComponents = [self.calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:startDate];
     NSInteger startYear = startDateComponents.year;
-    NSInteger startMonth = startDateComponents.month;
     NSDateComponents *endDateComponents = [self.calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:endDate];
     NSInteger endYear = endDateComponents.year;
     NSInteger endMonth = endDateComponents.month;

@@ -18,7 +18,6 @@ id nilForReal(id arg) { return ((arg == [NSNull null]) ? nil : arg); }
     mission.name = jsonDict[@"name"];
     mission.startDate = [mission datefromJSON:jsonDict[@"start_date"]];
     mission.endDate = [mission datefromJSON:jsonDict[@"end_date"]];
-    mission.endDate = [NSDate date];
     NSMutableArray *mutableAgencies = [NSMutableArray array];
     [[((NSString *)jsonDict[@"agency"]) componentsSeparatedByString:@","] enumerateObjectsUsingBlock:^(NSString *agency, NSUInteger idx, BOOL *stop) {
         if ([agency isEqualToString:@"NASA"]) {
