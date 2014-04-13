@@ -18,6 +18,10 @@
 		4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9818F9EF61009E585F /* DSATimelineWidthCalculator.m */; };
 		4C61AD9E18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */; };
 		4C61AD9F18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */; };
+		4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB014F518FA356A00E4B82F /* Novecentosanswide-DemiBold.otf */; };
+		4CB014FE18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB014F518FA356A00E4B82F /* Novecentosanswide-DemiBold.otf */; };
+		4CB014FF18FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB014F618FA356A00E4B82F /* Novecentosanswide-Light.otf */; };
+		4CB0150018FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB014F618FA356A00E4B82F /* Novecentosanswide-Light.otf */; };
 		4CD476E618F9B09F00E14178 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E518F9B09F00E14178 /* Foundation.framework */; };
 		4CD476E818F9B09F00E14178 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E718F9B09F00E14178 /* CoreGraphics.framework */; };
 		4CD476EA18F9B09F00E14178 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD476E918F9B09F00E14178 /* UIKit.framework */; };
@@ -76,6 +80,8 @@
 		4C61AD9818F9EF61009E585F /* DSATimelineWidthCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineWidthCalculator.m; sourceTree = "<group>"; };
 		4C61AD9C18FA189F009E585F /* DSATimelineOffsetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSATimelineOffsetManager.h; sourceTree = "<group>"; };
 		4C61AD9D18FA189F009E585F /* DSATimelineOffsetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSATimelineOffsetManager.m; sourceTree = "<group>"; };
+		4CB014F518FA356A00E4B82F /* Novecentosanswide-DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentosanswide-DemiBold.otf"; sourceTree = "<group>"; };
+		4CB014F618FA356A00E4B82F /* Novecentosanswide-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentosanswide-Light.otf"; sourceTree = "<group>"; };
 		4CD476E218F9B09F00E14178 /* Liftoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liftoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD476E518F9B09F00E14178 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CD476E718F9B09F00E14178 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -212,6 +218,31 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		4CB014F018FA345700E4B82F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4CB014F218FA346400E4B82F /* Images */,
+				4CB014F118FA346000E4B82F /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4CB014F118FA346000E4B82F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4CB014F518FA356A00E4B82F /* Novecentosanswide-DemiBold.otf */,
+				4CB014F618FA356A00E4B82F /* Novecentosanswide-Light.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4CB014F218FA346400E4B82F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		4CD476D918F9B09F00E14178 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +280,7 @@
 				4C12A10F18F9BAB7002F9AEE /* Data */,
 				4C12A10C18F9B921002F9AEE /* Mission */,
 				4C12A10D18F9B926002F9AEE /* Timeline */,
+				4CB014F018FA345700E4B82F /* Assets */,
 				4CD476F718F9B09F00E14178 /* Images.xcassets */,
 				4CD476EC18F9B09F00E14178 /* Supporting Files */,
 			);
@@ -409,9 +441,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */,
 				4CD476F018F9B09F00E14178 /* InfoPlist.strings in Resources */,
 				C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */,
 				4CD476F818F9B09F00E14178 /* Images.xcassets in Resources */,
+				4CB014FF18FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */,
 				C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +454,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB014FE18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */,
 				4CD4770918F9B09F00E14178 /* InfoPlist.strings in Resources */,
+				4CB0150018FA356A00E4B82F /* Novecentosanswide-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

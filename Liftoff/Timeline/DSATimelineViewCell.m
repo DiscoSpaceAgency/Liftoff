@@ -35,13 +35,21 @@
         _missionNameLabel.text = _mission.name;
         [_timelineStrip setFrame:CGRectMake(10 + [DSATimelineOffsetManager sharedInstance].offset + [DSATimelineWidthCalculator position:_mission.startDate], 22, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], 22)];
     }
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"TimelinePan" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pan:) name:@"TimelinePan" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetOffset:) name:@"TimelineResetOffset" object:nil];
 }
 
-- (void)receiveNotification:(NSNotification *) notification
+- (void)pan:(NSNotification *)notification
 {
     NSInteger offset = [(NSNumber *)notification.userInfo[@"translate"] integerValue];
     [_timelineStrip setFrame:CGRectMake(10 + offset + [DSATimelineWidthCalculator position:_mission.startDate], 22, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], 22)];
+}
+
+- (void)resetOffset:(NSNotification *)notification
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        [_timelineStrip setFrame:CGRectMake(10 + [DSATimelineOffsetManager sharedInstance].offset + [DSATimelineWidthCalculator position:_mission.startDate], 22, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], 22)];
+    }];
 }
 
 - (void)prepareForReuse
