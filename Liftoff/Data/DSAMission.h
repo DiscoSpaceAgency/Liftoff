@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, DSAMissionType) {
 @property (strong, nonatomic) NSDate *startDate;
 @property (strong, nonatomic) NSDate *endDate;
 @property (strong, nonatomic) NSArray *agencies;
+@property (strong, nonatomic) NSString *agencyString;
 @property (readwrite, nonatomic) DSAMissionType type;
 @property (strong, nonatomic) NSURL *websiteURL;
 @property (strong, nonatomic) NSURL *imageURL;

@@ -40,6 +40,7 @@
     _dataSource = [[DSATimelineDataSource alloc] init];
     [_timelineTable setDataSource:_dataSource];
     [_timelineTable setDelegate:[DSATimelineOffsetManager sharedInstance]];
+    [[DSATimelineOffsetManager sharedInstance] setTimelineTable:_timelineTable];
 }
 
 @end
