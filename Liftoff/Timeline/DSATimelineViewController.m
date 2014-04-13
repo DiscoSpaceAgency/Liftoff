@@ -22,13 +22,10 @@
 
 @implementation DSATimelineViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)awakeFromNib
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [super awakeFromNib];
+    [_liftoffLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:19.0]];
 }
 
 - (void)viewDidLoad
@@ -37,7 +34,7 @@
     // Do any additional setup after loading the view.
     _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSATimelineOffsetManager sharedInstance] action:@selector(panRecognized:)];
     [_panRecognizer setDelegate:[DSATimelineOffsetManager sharedInstance]];
-    [self.view addGestureRecognizer:_panRecognizer];
+    [_timelineTable addGestureRecognizer:_panRecognizer];
 
     _dataSource = [[DSATimelineDataSource alloc] init];
     [_timelineTable setDataSource:_dataSource];
