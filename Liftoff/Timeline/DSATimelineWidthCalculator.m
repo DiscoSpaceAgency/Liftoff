@@ -32,7 +32,7 @@
 
 float monthWidth(int month, int year)
 {
-    return 160 * exp(- pow(((year + (month - 1) / 12.0) - 2014),2) / (2*pow(3,2)));
+    return 160 * exp(- pow(((year + (month - 1) / 12.0) - 2014),2) / (2*pow(1,2)));
 }
 
 + (NSInteger)position:(NSDate *)date
@@ -63,6 +63,15 @@ float monthWidth(int month, int year)
         }
     }
     return position;
+}
+
++ (NSInteger)maxPosition
+{
+    NSDateComponents *maxDateComponents = [[NSDateComponents alloc] init];
+    maxDateComponents.year = 2024;
+    maxDateComponents.month = 4;
+    NSDate *maxDate = [self.calendar dateFromComponents:maxDateComponents];
+    return [self position:maxDate];
 }
 
 + (NSInteger)widthForStart:(NSDate *)startDate end:(NSDate *)endDate

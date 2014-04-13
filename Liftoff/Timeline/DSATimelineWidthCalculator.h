@@ -11,6 +11,7 @@
 @interface DSATimelineWidthCalculator : NSObject
 
 + (NSInteger)position:(NSDate *)date;
++ (NSInteger)maxPosition;
 + (NSInteger)widthForStart:(NSDate *)startDate end:(NSDate *)endDate;
 
 @end

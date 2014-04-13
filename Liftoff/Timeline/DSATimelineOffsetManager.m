@@ -7,11 +7,13 @@
 //
 
 #import "DSATimelineOffsetManager.h"
+#import "DSATimelineWidthCalculator.h"
 
 @interface DSATimelineOffsetManager ()
 
 @property (readwrite, nonatomic) BOOL isTableScrolling;
 @property (readwrite, nonatomic) NSInteger offset;
+@property (readwrite, nonatomic) NSInteger maxOffset;
 
 @end
 
@@ -33,6 +35,7 @@
     if (self) {
         _isTableScrolling = NO;
         _offset = 0;
+        _maxOffset = -[DSATimelineWidthCalculator maxPosition];
     }
     return self;
 }
@@ -58,13 +61,27 @@
 
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         _offset += [gestureRecognizer translationInView:gestureRecognizer.view].x;
+        if (_offset > 0) {
+            _offset = 0;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelineResetOffset" object:self];
+        }
+        else if (_offset < _maxOffset + gestureRecognizer.view.frame.size.width - 20) {
+            _offset = _maxOffset + gestureRecognizer.view.frame.size.width - 20;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelineResetOffset" object:self];
+        }
         _timelineTable.scrollEnabled = YES;
+        _isTableScrolling = NO;
     }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     _isTableScrolling = YES;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    _isTableScrolling = decelerate;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
