@@ -49,6 +49,11 @@
         _missionNameLabel.text = _mission.name;
         _agencyLabel.text = _mission.agencyString;
         [_timelineStrip setFrame:CGRectMake(10 + [DSATimelineOffsetManager sharedInstance].offset + [DSATimelineWidthCalculator position:_mission.startDate], 0, [DSATimelineWidthCalculator widthForStart:_mission.startDate end:_mission.endDate], self.frame.size.height)];
+//        [[DSATimelineWidthCalculator tickPositionsForYearsBetweenStart:_mission.startDate end:_mission.endDate] enumerateObjectsUsingBlock:^(NSNumber *tickPosition, NSUInteger idx, BOOL *stop) {
+//            UIView *tick = [[UIView alloc] initWithFrame:CGRectMake([tickPosition integerValue] - [DSATimelineWidthCalculator position:_mission.startDate], 0, 1, self.frame.size.height)];
+//            [tick setBackgroundColor:[UIColor colorWithRed:0.07 green:0.16 blue:0.25 alpha:1]];
+//            [_timelineStrip addSubview:tick];
+//        }];
         CGFloat labelMinX = MAX(-_timelineStrip.frame.origin.x + 10, 10);
         [_missionNameLabel setFrame:CGRectMake(labelMinX, 10, self.frame.size.width - 40, 30)];
         [_agencyLabel setFrame:CGRectMake(labelMinX, 35, self.frame.size.width - 40, 20)];

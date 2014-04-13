@@ -13,6 +13,7 @@
 + (NSInteger)position:(NSDate *)date;
 + (NSInteger)maxPosition;
 + (NSInteger)widthForStart:(NSDate *)startDate end:(NSDate *)endDate;
++ (NSArray *)tickPositionsForYearsBetweenStart:(NSDate *)startDate end:(NSDate *)endDate;
 
 + (NSDate *)startDateForPosition:(NSInteger)position;
 + (NSDate *)endDateForPosition:(NSInteger)position;

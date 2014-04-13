@@ -80,6 +80,27 @@ float monthWidth(int month, int year)
     return [self position:endDate] - [self position:startDate];
 }
 
++ (NSArray *)tickPositionsForYearsBetweenStart:(NSDate *)startDate end:(NSDate *)endDate
+{
+    NSMutableArray *tickPositions = [NSMutableArray array];
+    NSDateComponents *startDateComponents = [self.calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:startDate];
+    NSInteger startYear = startDateComponents.year;
+    NSInteger startMonth = startDateComponents.month;
+    NSDateComponents *endDateComponents = [self.calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit) fromDate:endDate];
+    NSInteger endYear = endDateComponents.year;
+    NSInteger endMonth = endDateComponents.month;
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.month = 1;
+    for (NSInteger year = startYear + 1; year <= endYear; year++) {
+        [dateComponents setYear:year];
+        if (year == endYear && 1 >= endMonth) {
+            break;
+        }
+        [tickPositions addObject:@([self position:[self.calendar dateFromComponents:dateComponents]])];
+    }
+    return tickPositions;
+}
+
 + (NSDate *)startDateForPosition:(NSInteger)position
 {
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
