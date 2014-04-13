@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 Disco Space Agency. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@protocol DSASettingsViewControllerDelegate <NSObject>
+
+- (void)dismissSettingsViewController;
+
+@end
 
 @interface DSASettingsViewController : UIViewController {
     IBOutlet UILabel *titleLabel;
@@ -15,6 +19,8 @@
     IBOutlet UILabel *launchesLabel;
     IBOutlet UIButton *launchesAlert;
 }
+
+@property (copy, nonatomic) NSString *segueIdentifier;
 
 - (IBAction)pressedLaunches:(id)sender;
 

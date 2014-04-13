@@ -34,7 +34,7 @@
 float monthWidth(int month, int year)
 {
     const NSInteger todayYear = [DSADataStore sharedInstance].todayYear;
-    return 10 * exp(- pow(((year + (month - 1)/12.0) - todayYear), 2) / (2*pow(9,2)));
+    return 5 * exp(- pow(((year + (month - 1)/12.0) - todayYear), 2) / (2*pow(30,2)));
 }
 
 + (NSInteger)position:(NSDate *)date

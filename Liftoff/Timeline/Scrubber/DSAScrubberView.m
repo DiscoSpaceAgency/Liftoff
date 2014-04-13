@@ -32,14 +32,14 @@
     NSInteger todayYear = todayDateComponents.year;
 
     CGFloat spacing = self.frame.size.width/MAX(maxYear-todayYear+1,todayYear-minYear+1)/2;
-    CGFloat lineWidth = 2;
+    CGFloat lineWidth = 1;
     _minX = self.frame.size.width/2+spacing*(minYear-todayYear);
     _maxX = self.frame.size.width/2+spacing*(maxYear-todayYear);
 
     UIView *todayView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2-lineWidth, self.frame.size.height/4, lineWidth*2, self.frame.size.height/2)];
     [todayView setBackgroundColor:[UIColor whiteColor]];
     [self addSubview:todayView];
-    for (NSInteger year = minYear; year <= maxYear; year++) {
+    for (NSInteger year = minYear + 1; year <= maxYear; year += 2) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2+spacing*(year-todayYear)-lineWidth/2, self.frame.size.height/4, lineWidth, self.frame.size.height/2)];
         [view setBackgroundColor:[UIColor whiteColor]];
         [self addSubview:view];
@@ -52,7 +52,7 @@
     _dateLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_dateLabel];
 
-    _dateMarker = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2-lineWidth, self.frame.size.height/4, lineWidth*2, self.frame.size.height/2)];
+    _dateMarker = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/2-lineWidth*2, self.frame.size.height/4, lineWidth*4, self.frame.size.height/2)];
     [_dateMarker setBackgroundColor:[UIColor colorWithRed:0.56 green:0.09 blue:0.06 alpha:1]];
     [self addSubview:_dateMarker];
 

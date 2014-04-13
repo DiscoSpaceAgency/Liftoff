@@ -66,16 +66,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="EVENTS">
-                                    <color key="titleColor" red="0.56470588235294117" green="0.090196078431372548" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="DLb-IX-37x" kind="custom" id="oDe-0R-r6d"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Bc-jq-Tre">
-                                <rect key="frame" x="20" y="20" width="62" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Bc-jq-Tre">
+                                <rect key="frame" x="13" y="13" width="58" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings">
+                                <state key="normal" image="icon_settings.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zRa-eh-myT" kind="push" identifier="showSettings" id="l1c-KW-aEd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zEG-3C-FL5">
                                 <rect key="frame" x="84" y="26" width="152" height="38"/>
@@ -93,7 +99,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.15686274509803921" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.56470588239999997" green="0.090196078430000007" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" id="FKD-x4-hff"/>
@@ -131,6 +137,9 @@
                                     <color key="titleColor" red="0.56470588239999997" green="0.090196078430000007" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eHN-Fn-oPG" kind="custom" id="xpm-Xm-1Oc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3rk-gf-phP">
                                 <rect key="frame" x="20" y="20" width="59" height="44"/>
@@ -139,6 +148,9 @@
                                     <color key="titleColor" red="0.56470588239999997" green="0.090196078430000007" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zRa-eh-myT" kind="custom" identifier="showSettings" id="QjK-Pk-FK4"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" sectionHeaderHeight="22" sectionFooterHeight="22" id="3gj-bu-s3D">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
@@ -296,7 +308,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Launches" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CFY-3k-5Qu">
-                                <rect key="frame" x="26" y="146" width="200" height="44"/>
+                                <rect key="frame" x="26" y="146" width="274" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -326,6 +338,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.066666666669999999" green="0.15686274510000001" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9vf-sV-rYi"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="description" destination="Lwz-Ql-HTk" id="lBJ-Mw-xXU"/>
@@ -333,6 +346,8 @@
                         <outlet property="launchesAlert" destination="48S-aQ-Te0" id="pu1-j3-6wF"/>
                         <outlet property="launchesLabel" destination="CFY-3k-5Qu" id="NeB-qK-Inn"/>
                         <outlet property="titleLabel" destination="cNK-12-NtH" id="9Zy-Ms-vQs"/>
+                        <segue destination="DLb-IX-37x" kind="custom" identifier="showEvents" id="z7l-gs-bZz"/>
+                        <segue destination="eHN-Fn-oPG" kind="custom" identifier="showTimeline" id="Ubh-3d-DeP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnO-Zi-1vI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -635,4 +650,9 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ubh-3d-DeP"/>
+        <segue reference="QjK-Pk-FK4"/>
+        <segue reference="z7l-gs-bZz"/>
+    </inferredMetricsTieBreakers>
 </document>

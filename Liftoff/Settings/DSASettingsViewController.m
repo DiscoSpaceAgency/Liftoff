@@ -60,7 +60,7 @@
 }
 
 - (IBAction)done:(id)sender {
-    
+    [self performSegueWithIdentifier:self.segueIdentifier sender:nil];
 }
 
 - (void)didReceiveMemoryWarning
