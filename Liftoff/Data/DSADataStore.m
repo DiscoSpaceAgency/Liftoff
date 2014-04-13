@@ -42,7 +42,7 @@
     }];
 
     _missions = [_missions sortedArrayUsingComparator:^NSComparisonResult(DSAMission *mission1, DSAMission *mission2) {
-        return [mission1.startDate compare:mission2.startDate];
+        return [mission2.startDate compare:mission1.startDate];
     }];
     _events = [_events sortedArrayUsingComparator:^NSComparisonResult(DSAEvent *event1, DSAEvent *event2) {
         return [event1.date compare:event2.date];
