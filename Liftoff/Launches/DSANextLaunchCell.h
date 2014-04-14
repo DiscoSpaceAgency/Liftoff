@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SVProgressHUD.h"
 
 @interface DSANextLaunchCell : UITableViewCell
 
@@ -15,5 +16,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *timeLabel;
 @property (nonatomic, strong) IBOutlet UIButton *watchLive;
 @property (nonatomic, strong) NSDate *date;
+
+- (IBAction)showLiveStream:(id)sender;
 
 @end

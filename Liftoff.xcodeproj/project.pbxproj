@@ -62,6 +62,8 @@
 		C93F329918FAF35B00288E26 /* icon_alert_active.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329718FAF35B00288E26 /* icon_alert_active.png */; };
 		C93F329A18FAF35B00288E26 /* icon_alert_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329818FAF35B00288E26 /* icon_alert_inactive.png */; };
 		C93F329C18FAFECA00288E26 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329B18FAFECA00288E26 /* Back.png */; };
+		C943A4F718FC552A00314615 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C943A4F418FC552A00314615 /* SVProgressHUD.bundle */; };
+		C943A4F818FC552A00314615 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C943A4F618FC552A00314615 /* SVProgressHUD.m */; };
 		C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C953A5C618FA4F5400131EA4 /* DSALaunch.m */; };
 		C985557318F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */; };
 		C985557518F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C985557418F9B3EF00D7D1C7 /* Storyboard_iPad.storyboard */; };
@@ -78,9 +80,6 @@
 		C985559D18F9D79800D7D1C7 /* UIImageResize.m in Sources */ = {isa = PBXBuildFile; fileRef = C985559318F9D79800D7D1C7 /* UIImageResize.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */; };
 		C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */; };
-		C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */; };
-		C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */; };
-		C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */; };
 		C98555BB18FA45BE00D7D1C7 /* DSALaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98555BA18FA45BE00D7D1C7 /* DSALaunchViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +159,10 @@
 		C93F329718FAF35B00288E26 /* icon_alert_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_active.png; sourceTree = "<group>"; };
 		C93F329818FAF35B00288E26 /* icon_alert_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_inactive.png; sourceTree = "<group>"; };
 		C93F329B18FAFECA00288E26 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		C943A4F318FC552A00314615 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SVProgressHUD-Prefix.pch"; path = "Dependencies/SVProgressHUD/SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		C943A4F418FC552A00314615 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = Dependencies/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		C943A4F518FC552A00314615 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = Dependencies/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		C943A4F618FC552A00314615 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = Dependencies/SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		C953A5C518FA4F5400131EA4 /* DSALaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSALaunch.h; sourceTree = "<group>"; };
 		C953A5C618FA4F5400131EA4 /* DSALaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSALaunch.m; sourceTree = "<group>"; };
 		C985557218F9B33A00D7D1C7 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -190,12 +193,6 @@
 		C98555A318F9DF9800D7D1C7 /* DSAEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAEventCell.m; sourceTree = "<group>"; };
 		C98555A518F9EAC800D7D1C7 /* DSAShadowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAShadowLabel.h; sourceTree = "<group>"; };
 		C98555A618F9EAC800D7D1C7 /* DSAShadowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAShadowLabel.m; sourceTree = "<group>"; };
-		C98555AB18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLKAutoLayoutPredicateList.h; path = Dependencies/FLKAutoLayout/FLKAutoLayoutPredicateList.h; sourceTree = "<group>"; };
-		C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLKAutoLayoutPredicateList.m; path = Dependencies/FLKAutoLayout/FLKAutoLayoutPredicateList.m; sourceTree = "<group>"; };
-		C98555AD18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayout.h"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayout.h"; sourceTree = "<group>"; };
-		C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayout.m"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayout.m"; sourceTree = "<group>"; };
-		C98555AF18F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutPredicate.h"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayoutPredicate.h"; sourceTree = "<group>"; };
-		C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayoutPredicate.m"; path = "Dependencies/FLKAutoLayout/UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
 		C98555B918FA45BE00D7D1C7 /* DSALaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSALaunchViewController.h; path = Liftoff/Launches/DSALaunchViewController.h; sourceTree = SOURCE_ROOT; };
 		C98555BA18FA45BE00D7D1C7 /* DSALaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSALaunchViewController.m; path = Liftoff/Launches/DSALaunchViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -427,6 +424,17 @@
 			path = Timeline;
 			sourceTree = "<group>";
 		};
+		C943A4F918FC553000314615 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C943A4F318FC552A00314615 /* SVProgressHUD-Prefix.pch */,
+				C943A4F418FC552A00314615 /* SVProgressHUD.bundle */,
+				C943A4F518FC552A00314615 /* SVProgressHUD.h */,
+				C943A4F618FC552A00314615 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		C985557F18F9D74100D7D1C7 /* EGOImageLoader */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,23 +461,10 @@
 		C985559E18F9D86800D7D1C7 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				C98555B418F9FC2C00D7D1C7 /* AutoLayout */,
+				C943A4F918FC553000314615 /* SVProgressHUD */,
 				C985557F18F9D74100D7D1C7 /* EGOImageLoader */,
 			);
 			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		C98555B418F9FC2C00D7D1C7 /* AutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-				C98555AB18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.h */,
-				C98555AC18F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m */,
-				C98555AD18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.h */,
-				C98555AE18F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m */,
-				C98555AF18F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.h */,
-				C98555B018F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m */,
-			);
-			name = AutoLayout;
 			sourceTree = "<group>";
 		};
 		C98555B818FA3F8F00D7D1C7 /* Launches */ = {
@@ -573,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C62445218FB006F00D1D582 /* icon_settings.png in Resources */,
+				C943A4F718FC552A00314615 /* SVProgressHUD.bundle in Resources */,
 				4CB014FD18FA356A00E4B82F /* Novecentosanswide-DemiBold.otf in Resources */,
 				C93F328C18FAE2A100288E26 /* ContinueChevron.png in Resources */,
 				C93F328918FAE09D00288E26 /* Rover.png in Resources */,
@@ -612,14 +608,12 @@
 				C93F327A18FAC0E400288E26 /* DSANextLaunchCell.m in Sources */,
 				C93F329318FAED8900288E26 /* DSANotificationController.m in Sources */,
 				4CA79CD918FA62F80008966B /* DSAScrubberManager.m in Sources */,
-				C98555B118F9FC2600D7D1C7 /* FLKAutoLayoutPredicateList.m in Sources */,
 				C985557E18F9D62F00D7D1C7 /* DSADataStore.m in Sources */,
 				4C61AD9A18F9EF61009E585F /* DSATimelineViewCell.m in Sources */,
 				C98555A718F9EAC800D7D1C7 /* DSAShadowLabel.m in Sources */,
 				C985559818F9D79800D7D1C7 /* EGOImageView.m in Sources */,
 				C985559618F9D79800D7D1C7 /* EGOImageLoadConnection.m in Sources */,
 				C98555BB18FA45BE00D7D1C7 /* DSALaunchViewController.m in Sources */,
-				C98555B318F9FC2600D7D1C7 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
 				4C62444218FABBE200D1D582 /* DSANavigationControllerDelegate.m in Sources */,
 				4C12A11218F9BB71002F9AEE /* DSAMission.m in Sources */,
 				C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */,
@@ -636,7 +630,6 @@
 				4C62444C18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m in Sources */,
 				4CA79CD518FA54250008966B /* DSAScrubberView.m in Sources */,
 				C985557D18F9D62F00D7D1C7 /* DSADataGrabber.m in Sources */,
-				C98555B218F9FC2600D7D1C7 /* UIView+FLKAutoLayout.m in Sources */,
 				C93F328018FACBC000288E26 /* DSADateConverter.m in Sources */,
 				C98555A418F9DF9800D7D1C7 /* DSAEventCell.m in Sources */,
 				C985559718F9D79800D7D1C7 /* EGOImageLoader.m in Sources */,
@@ -644,6 +637,7 @@
 				C985559A18F9D79800D7D1C7 /* NSString+SDExtensions.m in Sources */,
 				4C61AD9918F9EF61009E585F /* DSATimelineDataSource.m in Sources */,
 				4CD476F618F9B09F00E14178 /* DSAAppDelegate.m in Sources */,
+				C943A4F818FC552A00314615 /* SVProgressHUD.m in Sources */,
 				C93F327D18FAC0F800288E26 /* DSALaunchCell.m in Sources */,
 				C985557818F9B4C400D7D1C7 /* DSAMissionViewController.m in Sources */,
 				4C12A11618F9BB87002F9AEE /* DSAEvent.m in Sources */,

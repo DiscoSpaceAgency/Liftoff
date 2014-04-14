@@ -7,6 +7,7 @@
 //
 
 #import "DSANextLaunchCell.h"
+#import "DSADataGrabber.h"
 #import "DSADateConverter.h"
 
 @implementation DSANextLaunchCell
@@ -41,6 +42,20 @@
     self.timeLabel.text = [[DSADateConverter sharedInstance] timeUntilDate:self.date];
 }
 
+- (IBAction)showLiveStream:(id)sender {
+    [SVProgressHUD showWithStatus:@"Finding Stream"];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSURL *link = [[DSADataGrabber sharedInstance] getCurrentLiveStream];
+        dispatch_async( dispatch_get_main_queue(), ^{
+            if (link) {
+                [SVProgressHUD dismiss];
+                [[UIApplication sharedApplication] openURL:link];
+            } else {
+                [SVProgressHUD showErrorWithStatus:@"Not Found"];
+            }
+        });
+    });
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

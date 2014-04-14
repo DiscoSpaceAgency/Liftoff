@@ -12,5 +12,6 @@
 
 - (NSArray *)getAllMissions;
 - (NSArray *)getAllLaunches;
+- (NSURL *)getCurrentLiveStream;
 
 @end

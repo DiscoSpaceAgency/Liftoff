@@ -81,7 +81,7 @@
     dispatch_once(&onceToken, ^{
         monthTexts = @[@"ERR",@"Jan",@"Feb",@"Mar",@"Apr",@"May",@"Jun",@"Jul",@"Aug",@"Sep",@"Oct",@"Nov",@"Dec"];
     });
-    return [NSString stringWithFormat:@"%@ %i",monthTexts[dateMonth],dateYear];
+    return [NSString stringWithFormat:@"%@ %li",monthTexts[dateMonth],(long)dateYear];
 }
 
 @end

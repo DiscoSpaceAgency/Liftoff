@@ -65,7 +65,7 @@ float monthWidth(int month, int year)
                 break;
             }
             [memoDateComponents setMonth:month];
-            position += monthWidth(month, year);
+            position += monthWidth((int)month, (int)year);
             [self memos][[self.calendar dateFromComponents:memoDateComponents]] = @(position);
         }
     }

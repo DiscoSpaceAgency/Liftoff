@@ -8,8 +8,6 @@
 
 @protocol DSASettingsViewControllerDelegate <NSObject>
 
-- (void)dismissSettingsViewController;
-
 @end
 
 @interface DSASettingsViewController : UIViewController {

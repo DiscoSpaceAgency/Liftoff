@@ -127,6 +127,16 @@
     return launches;
 }
 
+- (NSURL *)getCurrentLiveStream
+{
+    NSString *rawData = [self stringFromURL:@"http://www.spaceflight101live.com"];
+    NSString *link = [self getStringWithStart:@"'><a href='http://www.spaceflight101live.com/" endString:@"'>Live Event</a>" fromData:rawData];
+    
+    link = [NSString stringWithFormat:@"http://www.spaceflight101live.com/%@", link];
+    
+    return [NSURL URLWithString:link];
+}
+
 - (NSString *)stringFromURL:(NSString *)url {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     NSError *errorDownload = nil;
