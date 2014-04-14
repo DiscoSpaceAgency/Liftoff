@@ -223,12 +223,10 @@ static EGOCache* __instance;
 }
 
 - (void)setString:(NSString*)aString forKey:(NSString*)key {
-    NSLog(@"Setting Cache 4 ");
 	[self setString:aString forKey:key withTimeoutInterval:self.defaultTimeoutInterval];
 }
 
 - (void)setString:(NSString*)aString forKey:(NSString*)key withTimeoutInterval:(NSTimeInterval)timeoutInterval {
-    NSLog(@"Setting Cache 3 ");
 	[self setData:[aString dataUsingEncoding:NSUTF8StringEncoding] forKey:key withTimeoutInterval:timeoutInterval];
 }
 
@@ -242,12 +240,10 @@ static EGOCache* __instance;
 }
 
 - (void)setImage:(UIImage*)anImage forKey:(NSString*)key {
-    NSLog(@"Setting Cache 1 %f, %f", anImage.size.width, anImage.size.height);
 	[self setImage:anImage forKey:key withTimeoutInterval:self.defaultTimeoutInterval];
 }
 
 - (void)setImage:(UIImage*)anImage forKey:(NSString*)key withTimeoutInterval:(NSTimeInterval)timeoutInterval {
-    NSLog(@"Setting Cache 2 %f, %f", anImage.size.width, anImage.size.height);
 	[self setData:UIImagePNGRepresentation(anImage) forKey:key withTimeoutInterval:timeoutInterval];
 }
 
@@ -307,12 +303,10 @@ static EGOCache* __instance;
 }
 
 - (void)setObject:(id<NSCoding>)anObject forKey:(NSString*)key {
-    NSLog(@"Setting Cache 5 ");
 	[self setObject:anObject forKey:key withTimeoutInterval:self.defaultTimeoutInterval];
 }
 
 - (void)setObject:(id<NSCoding>)anObject forKey:(NSString*)key withTimeoutInterval:(NSTimeInterval)timeoutInterval {
-    NSLog(@"Setting Cache 6 ");
 	[self setData:[NSKeyedArchiver archivedDataWithRootObject:anObject] forKey:key withTimeoutInterval:timeoutInterval];
 }
 

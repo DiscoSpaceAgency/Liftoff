@@ -35,9 +35,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    timelineButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0];
+    timelineButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-Light" size:14.0];
     settingsButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0];
-    titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:24.0];
+    titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:22.0];
+    
+    divider.frame = CGRectMake(divider.frame.origin.x, divider.frame.origin.y, divider.frame.size.width, .5);
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

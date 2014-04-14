@@ -31,8 +31,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [_liftoffButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:24.0]];
-    [_eventsButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0]];
+    [_liftoffButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:22.0]];
+    [_eventsButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-Light" size:14.0]];
 
     _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:[DSATimelineOffsetManager sharedInstance] action:@selector(panRecognized:)];
     [_panRecognizer setDelegate:[DSATimelineOffsetManager sharedInstance]];

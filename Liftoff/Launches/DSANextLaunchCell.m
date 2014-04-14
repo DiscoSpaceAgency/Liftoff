@@ -25,7 +25,7 @@
     self.watchLive.layer.borderWidth = 1;
     self.watchLive.layer.masksToBounds = YES;
     
-    [_launchName setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:20.0]];
+    [_launchName setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:25.0]];
     [_launchingIn setFont:[UIFont fontWithName:@"Novecentosanswide-Light" size:18.0]];
     
     [_timeLabel setFont:[UIFont fontWithName:@"Novecentosanswide-Light" size:60.0]];

@@ -20,17 +20,12 @@
     UILocalNotification *localNotif =
     [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (localNotif) {
-        NSLog(@"Recieved Notification %@",localNotif);
-        
         [[NSNotificationCenter defaultCenter] postNotificationName:@"showEvents" object:nil];
     }
     
     return YES;
 }
 - (void)application:(UIApplication *)app didReceiveLocalNotification:(UILocalNotification *)notif {
-    // Handle the notificaton when the app is running
-    NSLog(@"Recieved Notification %@",notif);
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showEvents" object:nil];
 }
 

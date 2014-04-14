@@ -101,7 +101,6 @@
         
         NSInteger offset = missionDescription.frame.size.height-160;
         content.contentSize = CGSizeMake(self.view.frame.size.width, 1400+offset);
-        NSLog(@"%ld", (long)offset);
         
         UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, content.contentSize.height)];
         [content insertSubview:container atIndex:0];

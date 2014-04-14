@@ -15,6 +15,8 @@
     IBOutlet UILabel *titleLabel;
     
     IBOutlet UITableView *launchesTable;
+    
+    IBOutlet UIImageView *divider;
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *settingsButton;

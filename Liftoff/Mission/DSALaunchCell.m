@@ -24,7 +24,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scroll:) name:@"LaunchScroll" object:nil];
     
     [_launchName setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:18.0]];
-    [_timeLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:15.0]];
+    [_timeLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:13.0]];
     [_dateLabel setFont:[UIFont fontWithName:@"Novecentosanswide-Light" size:17.0]];
     [_timeDetails setFont:[UIFont fontWithName:@"Novecentosanswide-Light" size:17.0]];
 }

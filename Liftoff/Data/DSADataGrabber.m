@@ -62,13 +62,17 @@
 
 - (NSArray *)getAllLaunches
 {
-    NSString *rawData = [self stringFromURL:@"http://www.spaceflight101.com/launch-calendar-april-2014.html"];
-    NSString *table = [self getStringWithStart:@"<td class=xl2627174>NOTES</td>" endString:@"<!----------------------------->" fromData:rawData];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MMMM-yyyy"];
+    NSString *yearString = [formatter stringFromDate:[NSDate date]];
+    
+    NSString *url = [NSString stringWithFormat:@"http://www.spaceflight101.com/launch-calendar-%@.html", yearString];
+    NSString *rawData = [self stringFromURL:url];
+    NSString *table = [self getStringWithStart:@"<tr height=21 style='mso-height-source:userset;height:15.75pt'>" endString:@"<!----------------------------->" fromData:rawData];
     
     NSMutableArray *launches = [[NSMutableArray alloc] init];
     
     [[table componentsSeparatedByString:@"</tr>"] enumerateObjectsUsingBlock:^(NSString *row, NSUInteger idx, BOOL *stop) {
-        
         if ([row rangeOfString:@"x:num>20"].location != NSNotFound) {
             DSALaunch *launch = [[DSALaunch alloc] init];
             __block NSString *year;
@@ -76,6 +80,7 @@
             __block NSString *time = @"00:00";
             
             [[row componentsSeparatedByString:@"\n"] enumerateObjectsUsingBlock:^(NSString *line, NSUInteger idx, BOOL *stop) {
+                
                 if (idx == 2) {
                     year = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
                 } else if (idx == 3) {
