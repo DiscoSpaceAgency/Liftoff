@@ -64,6 +64,7 @@
 
 - (void)dealloc
 {
+    [super dealloc];
     responseHandler = nil;
     responseData = nil;
 }

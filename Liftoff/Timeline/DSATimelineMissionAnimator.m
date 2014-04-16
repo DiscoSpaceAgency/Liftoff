@@ -41,6 +41,7 @@
 
     CGPoint toOrigin = [missionViewController.view.superview convertPoint:missionViewController.missionImage.frame.origin toView:transitionContext.containerView];
     CGRect toFrame = CGRectMake(toOrigin.x, toOrigin.y, missionViewController.missionImage.frame.size.width, missionViewController.missionImage.frame.size.height);
+    
     UIView *transitionView = [[UIView alloc] initWithFrame:timelineViewController.selectedTimelineStripRect];
     transitionView.clipsToBounds = YES;
     UIView *timelineStrip = [[UIView alloc] initWithFrame:CGRectMake(0, 0, transitionView.frame.size.width, transitionView.frame.size.height)];
@@ -57,7 +58,7 @@
     [[transitionContext containerView] addSubview:transitionView];
     [[transitionContext containerView] bringSubviewToFront:transitionView];
     [[transitionContext containerView] bringSubviewToFront:missionViewController.view];
-
+    
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         timelineViewController.view.transform = CGAffineTransformMakeScale(0.9, 0.9);
         timelineViewController.view.alpha = 0;

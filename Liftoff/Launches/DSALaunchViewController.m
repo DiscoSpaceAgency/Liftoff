@@ -35,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    timelineButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-Light" size:14.0];
+    timelineButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0];
     settingsButton.titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0];
     titleLabel.font = [UIFont fontWithName:@"Novecentosanswide-DemiBold" size:22.0];
     

@@ -59,7 +59,9 @@
 		imageURL = [aURL retain];
 	}
     
-    limitSize = CGSizeMake(1136, 1136);
+    if (!(limitSize.width > 0)) {
+        limitSize = CGSizeMake(520, 520);
+    }
     
 	[[EGOImageLoader sharedImageLoader] removeObserver:self];
 	UIImage* anImage = [[EGOImageLoader sharedImageLoader] imageForURL:aURL shouldLoadWithObserver:self withSize:&limitSize];
@@ -68,6 +70,7 @@
         //anImage = [self resizeImage:anImage newSize:self.frame.size];
         //NSLog(@"Image Size: %f, %f", anImage.size.height, anImage.size.width);
 		self.image = anImage;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"setImage" object:nil];
         
 		// trigger the delegate callback if the image was found in the cache
 		if([self.delegate respondsToSelector:@selector(imageViewLoadedImage:)]) {
@@ -88,6 +91,7 @@
 
 - (void)imageLoaderDidLoad:(NSNotification*)notification {
 	if(![[[notification userInfo] objectForKey:@"imageURL"] isEqual:self.imageURL]) return;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setImage" object:nil];
     
 	UIImage* anImage = [[notification userInfo] objectForKey:@"image"];
     //anImage = [self resizeImage:anImage newSize:self.frame.size];

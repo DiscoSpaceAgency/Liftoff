@@ -109,6 +109,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"Tap");
     [[NSNotificationCenter defaultCenter] postNotificationName:@"TimelineSelect" object:self userInfo:@{@"indexPath": indexPath}];
 }
 
