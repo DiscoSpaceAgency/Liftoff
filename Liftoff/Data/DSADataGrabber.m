@@ -89,7 +89,9 @@
                     if ([line rangeOfString:@"UTC"].location != NSNotFound) {
                         time = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
                         time = [time stringByReplacingOccurrencesOfString:@" UTC" withString:@""];
-                        time = [time substringToIndex:5];
+                        if (time.length > 6 || time.length == 6) {
+                            time = [time substringToIndex:5];
+                        }
                     }
                 } else if (idx == 6) {
                     NSString *vehicle = [self getStringWithStart:@">" endString:@"</td>" fromData:line];
