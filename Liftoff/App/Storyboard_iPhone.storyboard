@@ -70,7 +70,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DLb-IX-37x" kind="custom" identifier="showEvents" id="oDe-0R-r6d"/>
+                                    <segue destination="DLb-IX-37x" kind="modal" identifier="showEvents" modalTransitionStyle="flipHorizontal" id="Wem-Lx-m08"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Bc-jq-Tre">
@@ -81,7 +81,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zRa-eh-myT" kind="custom" identifier="showSettings" id="l1c-KW-aEd"/>
+                                    <segue destination="zRa-eh-myT" kind="custom" identifier="showSettings" customClass="DCModalSegue" id="Hsg-7v-fFh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zEG-3C-FL5">
@@ -144,7 +144,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eHN-Fn-oPG" kind="custom" id="xpm-Xm-1Oc"/>
+                                    <action selector="timeline:" destination="DLb-IX-37x" eventType="touchUpInside" id="Af1-bt-Qz6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3rk-gf-phP">
@@ -156,7 +156,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zRa-eh-myT" kind="custom" identifier="showSettings" id="QjK-Pk-FK4"/>
+                                    <segue destination="zRa-eh-myT" kind="custom" identifier="showSettings" customClass="DCModalSegue" id="kbT-qR-cD4"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" sectionHeaderHeight="22" sectionFooterHeight="22" id="3gj-bu-s3D">
@@ -286,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfB-5P-SvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="878"/>
+            <point key="canvasLocation" x="671" y="746"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="tmw-Bf-FXJ">
@@ -309,7 +309,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="done:" destination="zRa-eh-myT" eventType="touchUpInside" id="HpI-kf-WNQ"/>
+                                    <segue destination="ZBa-kB-IOn" kind="unwind" unwindAction="modalDonePresenting:" id="dhd-sT-wbO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALERT ME WHEN MISSION EVENTS ARE ABOUT TO HAPPEN!" lineBreakMode="tailTruncation" numberOfLines="999" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lwz-Ql-HTk">
@@ -365,13 +365,12 @@
                         <outlet property="launchesAlert" destination="48S-aQ-Te0" id="pu1-j3-6wF"/>
                         <outlet property="launchesLabel" destination="CFY-3k-5Qu" id="NeB-qK-Inn"/>
                         <outlet property="titleLabel" destination="cNK-12-NtH" id="9Zy-Ms-vQs"/>
-                        <segue destination="DLb-IX-37x" kind="custom" identifier="showEvents" id="z7l-gs-bZz"/>
-                        <segue destination="eHN-Fn-oPG" kind="custom" identifier="showTimeline" id="Ubh-3d-DeP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnO-Zi-1vI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZBa-kB-IOn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1189" y="862"/>
+            <point key="canvasLocation" x="1081" y="746"/>
         </scene>
         <!--Mission View Controller-->
         <scene sceneID="NpM-Vr-eRq">
@@ -615,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fh-fK-oLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="42"/>
+            <point key="canvasLocation" x="1081" y="42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fGf-Lq-nLq">
@@ -657,8 +656,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QjK-Pk-FK4"/>
-        <segue reference="oDe-0R-r6d"/>
-        <segue reference="xpm-Xm-1Oc"/>
+        <segue reference="kbT-qR-cD4"/>
     </inferredMetricsTieBreakers>
 </document>

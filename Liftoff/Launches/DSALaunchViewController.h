@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class DSALaunchViewController;
+
+@protocol DSALaunchViewControllerDelegate
+- (void)DSALaunchViewControllerDidFinish:(DSALaunchViewController *)controller;
+@end
+
 @interface DSALaunchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     IBOutlet UIButton *settingsButton;
     IBOutlet UIButton *timelineButton;
@@ -19,7 +25,10 @@
     IBOutlet UIImageView *divider;
 }
 
+@property (weak, nonatomic) id <DSALaunchViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UIButton *settingsButton;
 @property (strong, nonatomic) IBOutlet UIButton *timelineButton;
+
+- (IBAction)timeline:(id)sender;
 
 @end

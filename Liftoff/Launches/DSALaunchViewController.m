@@ -90,12 +90,8 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LaunchScroll" object:nil];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showSettings"]) {
-        DSASettingsViewController *settingsViewController = [segue destinationViewController];
-        settingsViewController.segueIdentifier = @"showEvents";
-    }
+- (IBAction)timeline:(id)sender {
+    [self.delegate DSALaunchViewControllerDidFinish:self];
 }
 
 - (void)didReceiveMemoryWarning

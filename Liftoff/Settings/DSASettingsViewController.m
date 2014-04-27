@@ -40,11 +40,6 @@
         [launchesAlert setImage:[UIImage imageNamed:@"icon_alert_inactive.png"] forState:UIControlStateNormal];
         launchesAlert.alpha = .5;
     }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showEvent) name:@"showEvents" object:nil];
-}
-- (void)showEvent {
-    [self done:self];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -64,25 +59,10 @@
     }
 }
 
-- (IBAction)done:(id)sender {
-    [self performSegueWithIdentifier:self.segueIdentifier sender:nil];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

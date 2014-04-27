@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     [_liftoffButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:22.0]];
     [_eventsButton.titleLabel setFont:[UIFont fontWithName:@"Novecentosanswide-DemiBold" size:14.0]];
 
@@ -46,13 +46,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(segueForTimelineNotification:) name:@"TimelineSelect" object:nil];
 
     _selectedTimelineStripRect = CGRectZero;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showEvent) name:@"showEvents" object:nil];
 }
-- (void)showEvent {
-    [self performSegueWithIdentifier:@"showEvents" sender:self];
-}
-
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
@@ -76,11 +70,13 @@
     if ([segue.identifier isEqualToString:@"showMission"]) {
         DSAMissionViewController *missionViewController = [segue destinationViewController];
         [missionViewController setMission:sender];
+    } else if ([segue.identifier isEqualToString:@"showEvents"]) {
+        [[segue destinationViewController] setDelegate:self];
     }
-    else if ([segue.identifier isEqualToString:@"showSettings"]) {
-        DSASettingsViewController *settingsViewController = [segue destinationViewController];
-        settingsViewController.segueIdentifier = @"showTimeline";
-    }
+}
+
+- (void)DSALaunchViewControllerDidFinish:(DSALaunchViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)dealloc {
