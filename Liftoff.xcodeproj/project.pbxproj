@@ -62,7 +62,7 @@
 		C93F329918FAF35B00288E26 /* icon_alert_active.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329718FAF35B00288E26 /* icon_alert_active.png */; };
 		C93F329A18FAF35B00288E26 /* icon_alert_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329818FAF35B00288E26 /* icon_alert_inactive.png */; };
 		C93F329C18FAFECA00288E26 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = C93F329B18FAFECA00288E26 /* Back.png */; };
-		C940A8C0190CB43300E0A381 /* DCModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C940A8BE190CB43300E0A381 /* DCModalSegue.m */; };
+		C940A8C3190CB88F00E0A381 /* DCModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C940A8C2190CB88F00E0A381 /* DCModalSegue.m */; };
 		C943A4F718FC552A00314615 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C943A4F418FC552A00314615 /* SVProgressHUD.bundle */; };
 		C943A4F818FC552A00314615 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C943A4F618FC552A00314615 /* SVProgressHUD.m */; };
 		C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = C953A5C618FA4F5400131EA4 /* DSALaunch.m */; };
@@ -160,8 +160,8 @@
 		C93F329718FAF35B00288E26 /* icon_alert_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_active.png; sourceTree = "<group>"; };
 		C93F329818FAF35B00288E26 /* icon_alert_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_alert_inactive.png; sourceTree = "<group>"; };
 		C93F329B18FAFECA00288E26 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
-		C940A8BE190CB43300E0A381 /* DCModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCModalSegue.m; path = "../../../../../Downloads/DCModalSegue-master/DCModalSegue/DCModalSegue.m"; sourceTree = "<group>"; };
-		C940A8BF190CB43300E0A381 /* DCModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCModalSegue.h; path = "../../../../../Downloads/DCModalSegue-master/DCModalSegue/DCModalSegue.h"; sourceTree = "<group>"; };
+		C940A8C1190CB88F00E0A381 /* DCModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCModalSegue.h; path = Liftoff/Dependencies/DCModalSegue/DCModalSegue.h; sourceTree = SOURCE_ROOT; };
+		C940A8C2190CB88F00E0A381 /* DCModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCModalSegue.m; path = Liftoff/Dependencies/DCModalSegue/DCModalSegue.m; sourceTree = SOURCE_ROOT; };
 		C943A4F318FC552A00314615 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SVProgressHUD-Prefix.pch"; path = "Dependencies/SVProgressHUD/SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
 		C943A4F418FC552A00314615 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = Dependencies/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 		C943A4F518FC552A00314615 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = Dependencies/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
@@ -271,8 +271,8 @@
 				4C62444718FAE7CC00D1D582 /* DSATimelineEventsAnimator.m */,
 				4C62444A18FAEBC100D1D582 /* DSATimelineSettingsAnimator.h */,
 				4C62444B18FAEBC100D1D582 /* DSATimelineSettingsAnimator.m */,
-				C940A8BF190CB43300E0A381 /* DCModalSegue.h */,
-				C940A8BE190CB43300E0A381 /* DCModalSegue.m */,
+				C940A8C1190CB88F00E0A381 /* DCModalSegue.h */,
+				C940A8C2190CB88F00E0A381 /* DCModalSegue.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -624,7 +624,7 @@
 				C985559418F9D79800D7D1C7 /* EGOCache.m in Sources */,
 				4C61AD9E18FA189F009E585F /* DSATimelineOffsetManager.m in Sources */,
 				C985559518F9D79800D7D1C7 /* EGOImageButton.m in Sources */,
-				C940A8C0190CB43300E0A381 /* DCModalSegue.m in Sources */,
+				C940A8C3190CB88F00E0A381 /* DCModalSegue.m in Sources */,
 				4C62443E18FAAFBD00D1D582 /* DSATimelineMissionAnimator.m in Sources */,
 				4C61AD9B18F9EF61009E585F /* DSATimelineWidthCalculator.m in Sources */,
 				C953A5C718FA4F5400131EA4 /* DSALaunch.m in Sources */,
